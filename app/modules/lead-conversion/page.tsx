@@ -110,7 +110,7 @@ export default async function LeadConversionPage({ searchParams }: { searchParam
             </div>
 
             <div className="flex justify-end">
-              <SectionComplete moduleId={MODULE_ID} sectionId="mindset" completed={completedIds.has('mindset')} />
+              <SectionComplete moduleId={MODULE_ID} sectionId="mindset" completed={completedIds.has('mindset')} nextHref="?tab=opening-scripts" />
             </div>
           </div>
         )}
@@ -176,7 +176,7 @@ export default async function LeadConversionPage({ searchParams }: { searchParam
             </div>
 
             <div className="flex justify-end">
-              <SectionComplete moduleId={MODULE_ID} sectionId="opening-scripts" completed={completedIds.has('opening-scripts')} />
+              <SectionComplete moduleId={MODULE_ID} sectionId="opening-scripts" completed={completedIds.has('opening-scripts')} nextHref="?tab=framework" />
             </div>
           </div>
         )}
@@ -247,7 +247,7 @@ export default async function LeadConversionPage({ searchParams }: { searchParam
             </div>
 
             <div className="flex justify-end">
-              <SectionComplete moduleId={MODULE_ID} sectionId="framework" completed={completedIds.has('framework')} />
+              <SectionComplete moduleId={MODULE_ID} sectionId="framework" completed={completedIds.has('framework')} nextHref="?tab=objections" />
             </div>
           </div>
         )}
@@ -376,7 +376,7 @@ export default async function LeadConversionPage({ searchParams }: { searchParam
             ))}
 
             <div className="flex justify-end">
-              <SectionComplete moduleId={MODULE_ID} sectionId="objections" completed={completedIds.has('objections')} />
+              <SectionComplete moduleId={MODULE_ID} sectionId="objections" completed={completedIds.has('objections')} nextHref="?tab=appointment" />
             </div>
           </div>
         )}
@@ -496,7 +496,7 @@ export default async function LeadConversionPage({ searchParams }: { searchParam
             </div>
 
             <div className="flex justify-end">
-              <SectionComplete moduleId={MODULE_ID} sectionId="appointment" completed={completedIds.has('appointment')} />
+              <SectionComplete moduleId={MODULE_ID} sectionId="appointment" completed={completedIds.has('appointment')} nextHref="?tab=discovery" />
             </div>
           </div>
         )}
@@ -575,7 +575,7 @@ export default async function LeadConversionPage({ searchParams }: { searchParam
             </div>
 
             <div className="flex justify-end">
-              <SectionComplete moduleId={MODULE_ID} sectionId="discovery" completed={completedIds.has('discovery')} />
+              <SectionComplete moduleId={MODULE_ID} sectionId="discovery" completed={completedIds.has('discovery')} nextHref="?tab=follow-up" />
             </div>
           </div>
         )}
@@ -629,7 +629,7 @@ export default async function LeadConversionPage({ searchParams }: { searchParam
             </div>
 
             <div className="flex justify-end">
-              <SectionComplete moduleId={MODULE_ID} sectionId="follow-up" completed={completedIds.has('follow-up')} />
+              <SectionComplete moduleId={MODULE_ID} sectionId="follow-up" completed={completedIds.has('follow-up')} nextHref="?tab=mindset-check" />
             </div>
           </div>
         )}

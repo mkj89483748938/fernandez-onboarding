@@ -148,7 +148,7 @@ export default async function ContractsPage({ searchParams }: { searchParams: Pr
             </div>
 
             <div className="flex justify-end">
-              <SectionComplete moduleId={MODULE_ID} sectionId="rpa" completed={completedIds.has('rpa')} />
+              <SectionComplete moduleId={MODULE_ID} sectionId="rpa" completed={completedIds.has('rpa')} nextHref="?tab=listing" />
             </div>
           </div>
         )}
@@ -223,7 +223,7 @@ export default async function ContractsPage({ searchParams }: { searchParams: Pr
             ))}
 
             <div className="flex justify-end">
-              <SectionComplete moduleId={MODULE_ID} sectionId="listing" completed={completedIds.has('listing')} />
+              <SectionComplete moduleId={MODULE_ID} sectionId="listing" completed={completedIds.has('listing')} nextHref="?tab=avid" />
             </div>
           </div>
         )}
@@ -299,7 +299,7 @@ export default async function ContractsPage({ searchParams }: { searchParams: Pr
             ))}
 
             <div className="flex justify-end">
-              <SectionComplete moduleId={MODULE_ID} sectionId="avid" completed={completedIds.has('avid')} />
+              <SectionComplete moduleId={MODULE_ID} sectionId="avid" completed={completedIds.has('avid')} nextHref="?tab=rr" />
             </div>
           </div>
         )}
@@ -376,7 +376,7 @@ export default async function ContractsPage({ searchParams }: { searchParams: Pr
             </div>
 
             <div className="flex justify-end">
-              <SectionComplete moduleId={MODULE_ID} sectionId="rr" completed={completedIds.has('rr')} />
+              <SectionComplete moduleId={MODULE_ID} sectionId="rr" completed={completedIds.has('rr')} nextHref="?tab=counter" />
             </div>
           </div>
         )}
@@ -441,7 +441,7 @@ export default async function ContractsPage({ searchParams }: { searchParams: Pr
             ))}
 
             <div className="flex justify-end">
-              <SectionComplete moduleId={MODULE_ID} sectionId="counter" completed={completedIds.has('counter')} />
+              <SectionComplete moduleId={MODULE_ID} sectionId="counter" completed={completedIds.has('counter')} nextHref="?tab=escrow-checklist" />
             </div>
           </div>
         )}
@@ -520,7 +520,7 @@ export default async function ContractsPage({ searchParams }: { searchParams: Pr
             </div>
 
             <div className="flex justify-end">
-              <SectionComplete moduleId={MODULE_ID} sectionId="escrow-checklist" completed={completedIds.has('escrow-checklist')} />
+              <SectionComplete moduleId={MODULE_ID} sectionId="escrow-checklist" completed={completedIds.has('escrow-checklist')} nextHref="?tab=escrow-email" />
             </div>
           </div>
         )}

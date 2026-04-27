@@ -96,7 +96,7 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
               ))}
             </div>
             <div className="flex justify-end">
-              <SectionComplete moduleId={MODULE_ID} sectionId="overview" completed={completedIds.has('overview')} />
+              <SectionComplete moduleId={MODULE_ID} sectionId="overview" completed={completedIds.has('overview')} nextHref="?tab=stars" />
             </div>
           </div>
         )}
@@ -142,7 +142,7 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
             </div>
 
             <div className="flex justify-end">
-              <SectionComplete moduleId={MODULE_ID} sectionId="stars" completed={completedIds.has('stars')} />
+              <SectionComplete moduleId={MODULE_ID} sectionId="stars" completed={completedIds.has('stars')} nextHref="?tab=listing-alerts" />
             </div>
           </div>
         )}
@@ -229,7 +229,7 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
             </div>
 
             <div className="flex justify-end">
-              <SectionComplete moduleId={MODULE_ID} sectionId="listing-alerts" completed={completedIds.has('listing-alerts')} />
+              <SectionComplete moduleId={MODULE_ID} sectionId="listing-alerts" completed={completedIds.has('listing-alerts')} nextHref="?tab=seller-reports" />
             </div>
           </div>
         )}
@@ -296,7 +296,7 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
             </div>
 
             <div className="flex justify-end">
-              <SectionComplete moduleId={MODULE_ID} sectionId="seller-reports" completed={completedIds.has('seller-reports')} />
+              <SectionComplete moduleId={MODULE_ID} sectionId="seller-reports" completed={completedIds.has('seller-reports')} nextHref="?tab=ai-conversations" />
             </div>
           </div>
         )}
@@ -360,7 +360,7 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
             </div>
 
             <div className="flex justify-end">
-              <SectionComplete moduleId={MODULE_ID} sectionId="ai-conversations" completed={completedIds.has('ai-conversations')} />
+              <SectionComplete moduleId={MODULE_ID} sectionId="ai-conversations" completed={completedIds.has('ai-conversations')} nextHref="?tab=agent-site" />
             </div>
           </div>
         )}
