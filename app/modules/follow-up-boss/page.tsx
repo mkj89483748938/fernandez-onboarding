@@ -2,6 +2,7 @@ import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 import SectionComplete from '@/components/SectionComplete'
+import StagesComplete from '@/components/StagesComplete'
 
 const MODULE_ID = 'follow-up-boss'
 
@@ -105,7 +106,7 @@ export default async function FollowUpBossPage({ searchParams }: { searchParams:
               </p>
             </div>
             <div className="flex justify-end">
-              <SectionComplete moduleId={MODULE_ID} sectionId="philosophy" completed={completedIds.has('philosophy')} />
+              <SectionComplete moduleId={MODULE_ID} sectionId="philosophy" completed={completedIds.has('philosophy')} nextHref="?tab=stages" />
             </div>
           </div>
         )}
@@ -144,9 +145,13 @@ export default async function FollowUpBossPage({ searchParams }: { searchParams:
               <p className="text-sm text-zinc-600">If a lead asks not to be contacted, immediately apply the <strong>DNC</strong> tag. This moves them to the pond and removes them from all automated communications. Never call a DNC-tagged lead.</p>
             </div>
 
-            <div className="flex justify-end">
-              <SectionComplete moduleId={MODULE_ID} sectionId="stages" completed={completedIds.has('stages')} />
-            </div>
+            <StagesComplete
+              pairs={ALL_STAGES.map(s => ({ term: s.name, definition: s.desc }))}
+              moduleId={MODULE_ID}
+              sectionId="stages"
+              completed={completedIds.has('stages')}
+              nextHref="?tab=smart-lists"
+            />
           </div>
         )}
 
@@ -183,7 +188,7 @@ export default async function FollowUpBossPage({ searchParams }: { searchParams:
             </div>
 
             <div className="flex justify-end">
-              <SectionComplete moduleId={MODULE_ID} sectionId="smart-lists" completed={completedIds.has('smart-lists')} />
+              <SectionComplete moduleId={MODULE_ID} sectionId="smart-lists" completed={completedIds.has('smart-lists')} nextHref="?tab=lead-view" />
             </div>
           </div>
         )}
@@ -258,7 +263,7 @@ export default async function FollowUpBossPage({ searchParams }: { searchParams:
             </div>
 
             <div className="flex justify-end">
-              <SectionComplete moduleId={MODULE_ID} sectionId="lead-view" completed={completedIds.has('lead-view')} />
+              <SectionComplete moduleId={MODULE_ID} sectionId="lead-view" completed={completedIds.has('lead-view')} nextHref="?tab=best-practices" />
             </div>
           </div>
         )}
