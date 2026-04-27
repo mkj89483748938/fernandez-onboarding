@@ -19,9 +19,7 @@ export default function StagesComplete({ pairs, moduleId, sectionId, completed, 
 
   return (
     <div className="space-y-4">
-      {!completed && (
-        <MatchingQuiz pairs={pairs} onPass={() => setQuizPassed(true)} />
-      )}
+      <MatchingQuiz pairs={pairs} onPass={() => setQuizPassed(true)} />
       <div className="flex justify-end">
         <SectionComplete
           moduleId={moduleId}
