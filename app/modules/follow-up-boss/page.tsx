@@ -5,26 +5,20 @@ import SectionComplete from '@/components/SectionComplete'
 
 const MODULE_ID = 'follow-up-boss'
 
-const STAGES_GREEN = [
-  { name: 'Lead', timeline: 'New — no contact yet', ai: 'AI active', desc: 'Brand new lead that has not been spoken with yet. AI immediately begins outreach. Your goal is to call within 5 minutes of the lead coming in.' },
-  { name: 'Contact', timeline: 'Long-term nurture', ai: 'AI active', desc: 'Not buying or selling anytime soon — just curious, likes looking at homes, already has an agent, or already bought. AI stays on for long-term nurture. You can still call manually.' },
-]
-
-const STAGES_AGENT = [
-  { name: 'A Hot', timeline: 'Within 90 days', ai: 'Weekly contact', desc: 'Timeline is within 90 days. Call weekly and stay top of mind. This is your active pipeline — treat it like a job.' },
-  { name: 'B Warm', timeline: '3–6 months', ai: 'Every 2 weeks', desc: 'Timeline is 3–6 months out. Communicate every two weeks. Keep delivering value and watch for any change in urgency.' },
-  { name: 'C Cold', timeline: '6+ months', ai: 'Monthly via Ylopo', desc: 'Timeline is 6+ months. Cold leads are on action plans and remarketed via Ylopo. Check in monthly and let the system do the heavy lifting.' },
-  { name: 'Appointment Set', timeline: 'Meeting on calendar', ai: 'Agent takes over', desc: 'An appointment has been set — whether a listing appointment or a home showing. Move here the moment it is scheduled.' },
-  { name: 'Met With Client', timeline: 'Consulted', ai: 'Agent takes over', desc: 'You have met with this client but they are not yet actively shopping. Keep the relationship warm with regular personal follow-up.' },
-  { name: 'Active Client', timeline: 'Actively working', ai: 'Agent takes over', desc: 'Listing is signed or buyer is actively shopping for homes with you. This is your relationship — manage it personally.' },
-  { name: 'Pending', timeline: 'In escrow', ai: 'Agent takes over', desc: 'Fully executed contract and in escrow. Move here the day you open escrow.' },
-  { name: 'Closed', timeline: 'Transaction complete', ai: 'Agent takes over', desc: 'Deal is done. Move here on close of escrow. Start your past-client nurture and ask for a review and referral.' },
-]
-
-const STAGES_RED = [
-  { name: 'Bad Phone Number', ai: 'AI off', desc: 'This will automatically move to the Contact stage and start the bad phone number automation. Verify their contact info and update it before moving them back to Lead.' },
-  { name: 'Renter', ai: 'AI off', desc: 'Only looking to rent for now. Future buyer — keep them in your database and set a reminder to check in when their lease is likely up.' },
-  { name: 'Trash', ai: 'AI off', desc: 'DO NOT trash leads yourself. If you think a lead should go here, notify an admin. This designation is admin-only.' },
+const ALL_STAGES = [
+  { name: 'Lead', timeline: 'New — no contact yet', ai: true, desc: 'Brand new lead that has not been spoken with yet. AI immediately begins outreach. Your goal is to call within 5 minutes of the lead coming in.' },
+  { name: 'A Hot', timeline: 'Within 90 days', ai: false, desc: 'Timeline is within 90 days. Call weekly and stay top of mind. This is your active pipeline — treat it like a job.' },
+  { name: 'B Warm', timeline: '3–6 months', ai: false, desc: 'Timeline is 3–6 months out. Communicate every two weeks. Keep delivering value and watch for any change in urgency.' },
+  { name: 'C Cold', timeline: '6+ months', ai: false, desc: 'Timeline is 6+ months. Cold leads are on action plans and remarketed via Ylopo. Check in monthly and let the system do the heavy lifting.' },
+  { name: 'Contact', timeline: 'Long-term nurture', ai: true, desc: 'Not buying or selling anytime soon — just curious, likes looking at homes, already has an agent, or already bought. AI stays on for long-term nurture. You can still call manually.' },
+  { name: 'Bad Phone Number', timeline: 'Moves to Contact', ai: false, desc: 'This will automatically move to the Contact stage and start the bad phone number automation. Verify their contact info and update it before moving them back to Lead.' },
+  { name: 'Renter', timeline: 'Future buyer', ai: false, desc: 'Only looking to rent for now. Future buyer — keep them in your database and set a reminder to check in when their lease is likely up.' },
+  { name: 'Appointment Set', timeline: 'Meeting on calendar', ai: false, desc: 'An appointment has been set — whether a listing appointment or a home showing. Move here the moment it is scheduled.' },
+  { name: 'Met With Client', timeline: 'Consulted', ai: false, desc: 'You have met with this client but they are not yet actively shopping. Keep the relationship warm with regular personal follow-up.' },
+  { name: 'Active Client', timeline: 'Actively working', ai: false, desc: 'Listing is signed or buyer is actively shopping for homes with you. This is your relationship — manage it personally.' },
+  { name: 'Pending', timeline: 'In escrow', ai: false, desc: 'Fully executed contract and in escrow. Move here the day you open escrow.' },
+  { name: 'Closed', timeline: 'Transaction complete', ai: false, desc: 'Deal is done. Move here on close of escrow. Start your past-client nurture and ask for a review and referral.' },
+  { name: 'Trash', timeline: 'Admin only', ai: false, desc: 'DO NOT trash leads yourself. If you think a lead should go here, notify an admin. This designation is admin-only.' },
 ]
 
 const SMART_LISTS = [
@@ -118,71 +112,31 @@ export default async function FollowUpBossPage({ searchParams }: { searchParams:
 
         {/* Stages */}
         {activeTab === 'stages' && (
-          <div className="space-y-6">
-            <div className="bg-white border border-zinc-200 rounded-xl p-6">
-              <p className="text-sm text-zinc-600 mb-1">
-                <strong>Green = AI will contact.</strong> <strong>Red = AI will not contact.</strong> AI only contacts leads in the <strong>Lead</strong> and <strong>Contact</strong> stages. All other stages require you to manage communication personally at the cadence listed.
+          <div className="space-y-4">
+            <div className="bg-white border border-zinc-200 rounded-xl p-5">
+              <p className="text-sm text-zinc-600">
+                AI only contacts leads in the <strong>Lead</strong> and <strong>Contact</strong> stages. All other stages require you to manage communication personally. Keep stages accurate — a wrong stage means the AI is either working leads it shouldn&apos;t, or silent when it should be nurturing.
               </p>
-              <p className="text-xs text-zinc-400 mt-1">Keep stages accurate — a wrong stage means the AI either goes silent when it should be nurturing, or keeps texting someone you're actively working.</p>
             </div>
 
-            {/* Green */}
-            <div>
-              <div className="flex items-center gap-2 mb-3">
-                <div className="w-2.5 h-2.5 rounded-full bg-emerald-500"></div>
-                <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-500">Green — AI Active</h2>
-              </div>
-              <div className="space-y-2">
-                {STAGES_GREEN.map(s => (
-                  <div key={s.name} className="bg-white border border-zinc-200 rounded-xl p-4">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="font-semibold text-sm">{s.name}</span>
-                      <span className="text-xs bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full border border-emerald-200">{s.ai}</span>
-                    </div>
-                    <p className="text-xs text-zinc-400 mb-1.5">{s.timeline}</p>
-                    <p className="text-sm text-zinc-600 leading-relaxed">{s.desc}</p>
+            <div className="space-y-2">
+              {ALL_STAGES.map((s, i) => (
+                <div key={s.name} className="bg-white border border-zinc-200 rounded-xl p-4">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-xs text-zinc-400 w-5 shrink-0">{i + 1}.</span>
+                    <span className="font-semibold text-sm">{s.name}</span>
+                    <span className={`text-xs px-2 py-0.5 rounded-full border ${
+                      s.ai
+                        ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                        : 'bg-zinc-100 text-zinc-500 border-zinc-200'
+                    }`}>
+                      {s.ai ? 'AI Active' : 'AI Inactive'}
+                    </span>
                   </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Agent-managed */}
-            <div>
-              <div className="flex items-center gap-2 mb-3">
-                <div className="w-2.5 h-2.5 rounded-full bg-zinc-400"></div>
-                <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-500">Agent Managed — You Handle Communication</h2>
-              </div>
-              <div className="space-y-2">
-                {STAGES_AGENT.map(s => (
-                  <div key={s.name} className="bg-white border border-zinc-200 rounded-xl p-4">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="font-semibold text-sm">{s.name}</span>
-                      <span className="text-xs bg-zinc-100 text-zinc-600 px-2 py-0.5 rounded-full border border-zinc-200">{s.ai}</span>
-                    </div>
-                    <p className="text-xs text-zinc-400 mb-1.5">{s.timeline}</p>
-                    <p className="text-sm text-zinc-600 leading-relaxed">{s.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Red */}
-            <div>
-              <div className="flex items-center gap-2 mb-3">
-                <div className="w-2.5 h-2.5 rounded-full bg-red-400"></div>
-                <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-500">Red — AI Off</h2>
-              </div>
-              <div className="space-y-2">
-                {STAGES_RED.map(s => (
-                  <div key={s.name} className="bg-white border border-zinc-200 rounded-xl p-4">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="font-semibold text-sm">{s.name}</span>
-                      <span className="text-xs bg-red-50 text-red-700 px-2 py-0.5 rounded-full border border-red-200">{s.ai}</span>
-                    </div>
-                    <p className="text-sm text-zinc-600 leading-relaxed">{s.desc}</p>
-                  </div>
-                ))}
-              </div>
+                  <p className="text-xs text-zinc-400 mb-1 ml-5">{s.timeline}</p>
+                  <p className="text-sm text-zinc-600 leading-relaxed ml-5">{s.desc}</p>
+                </div>
+              ))}
             </div>
 
             <div className="bg-white border border-zinc-200 rounded-xl p-5">
