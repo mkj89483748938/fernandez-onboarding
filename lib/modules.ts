@@ -1,0 +1,42 @@
+export const MODULES = [
+  {
+    id: 'exp-signup',
+    number: 1,
+    title: 'eXp Realty Signup',
+    description: 'Complete your eXp sign-up and join the team roster.',
+    href: '/modules/exp-signup',
+    totalSections: 5,
+  },
+  {
+    id: 'follow-up-boss',
+    number: 2,
+    title: 'Follow Up Boss',
+    description: 'Master your CRM — stages, smart lists, lead view, and best practices.',
+    href: '/modules/follow-up-boss',
+    totalSections: 5,
+  },
+  {
+    id: 'ylopo',
+    number: 3,
+    title: 'Ylopo',
+    description: 'Stars, listing alerts, seller reports, AI conversations, and your agent site.',
+    href: '/modules/ylopo',
+    totalSections: 6,
+  },
+  {
+    id: 'lead-conversion',
+    number: 4,
+    title: 'Lead Conversion',
+    description: 'Scripts, objection handlers, and appointment-setting for buyers and sellers.',
+    href: '/modules/lead-conversion',
+    totalSections: 8,
+  },
+  {
+    id: 'contracts',
+    number: 5,
+    title: 'Contract Basics',
+    description: 'Step-by-step walkthroughs for RPA, Listing Agreement, AVID, and more.',
+    href: '/modules/contracts',
+    totalSections: 7,
+  },
+]
