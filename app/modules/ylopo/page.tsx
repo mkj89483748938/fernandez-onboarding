@@ -65,14 +65,19 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
             <div className="bg-white border border-zinc-200 rounded-xl p-6 space-y-3">
               <h2 className="font-semibold">What is Ylopo?</h2>
               <p className="text-sm text-zinc-600 leading-relaxed">
-                Ylopo is a full-platform real estate technology suite that combines AI-powered lead nurture,
-                dynamic Facebook and Google ad campaigns, buyer and seller search sites, and behavioral
-                analytics — all connected to your Follow Up Boss CRM.
+                Ylopo is a suite of tools designed to assist your lead nurture and help you convert more leads.
+                It combines AI-powered outreach, dynamic ad campaigns, buyer and seller search sites, and
+                behavioral analytics — all connected to your Follow Up Boss CRM.
               </p>
               <p className="text-sm text-zinc-600 leading-relaxed">
                 When a lead registers on your site, Ylopo&apos;s AI (Raiya) begins automated text and email
                 outreach immediately. Your job is to jump in the moment a lead replies. Ylopo handles the
                 first contact; you handle the conversion.
+              </p>
+              <p className="text-sm text-zinc-600 leading-relaxed">
+                Think of Ylopo as your 24/7 assistant — it never stops working your database, keeping leads
+                warm and surfacing the ones who are ready to act. The agents who win with Ylopo are the ones
+                who respond fast when it flags an engaged lead.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-3">
@@ -190,6 +195,37 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
                   </div>
                 ))}
               </ol>
+            </div>
+
+            <div className="bg-white border border-zinc-200 rounded-xl p-6 space-y-3">
+              <h3 className="font-semibold">Listing Alert Links — Share a Direct Search Link</h3>
+              <p className="text-sm text-zinc-600 leading-relaxed">
+                There is a new feature in Ylopo Stars listing alerts. Under <strong>Saved Search &amp; Listing Alerts</strong>,
+                when you select Listing Alerts, you will see a new link button. Once a listing alert is created,
+                you can generate a link to share directly with the lead.
+              </p>
+              <p className="text-sm text-zinc-600 leading-relaxed">
+                This link routes directly to your home search site using the criteria from the listing alert
+                while automatically logging the lead in. As the lead changes their search parameters, Ylopo
+                dynamically updates the listing alert to reflect their engagement.
+              </p>
+              <div className="bg-red-50 border border-red-200 rounded-lg p-3">
+                <p className="text-xs font-semibold text-red-700 mb-1">Important</p>
+                <p className="text-sm text-red-700">
+                  Do <strong>not</strong> click on this link yourself — it will register as lead engagement
+                  and skew their behavioral data in Ylopo.
+                </p>
+              </div>
+              <div className="pt-1">
+                <a
+                  href="https://www.loom.com/share/7149c8aa55434ad2bca1f1e99bf66d2a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-zinc-900 underline underline-offset-2"
+                >
+                  Watch the walkthrough video by Gabe Cordova →
+                </a>
+              </div>
             </div>
 
             <div className="flex justify-end">
