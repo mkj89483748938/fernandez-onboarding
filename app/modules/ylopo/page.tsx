@@ -253,9 +253,9 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
             <div className="bg-white border border-zinc-200 rounded-xl p-6 space-y-3">
               <h2 className="font-semibold">The Seller Report</h2>
               <p className="text-sm text-zinc-600 leading-relaxed">
-                The Seller Report is a branded, automated home valuation report sent to potential sellers.
-                It shows their estimated home value, equity position, and how many buyers are actively searching
-                for a home like theirs. It is one of your most powerful long-term nurture tools.
+                The Seller Report is a branded, automated home valuation report. It shows their estimated home value,
+                equity position, and how many buyers are actively searching for a home like theirs. It is one of
+                your most powerful long-term nurture tools.
               </p>
             </div>
 
@@ -263,12 +263,12 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
               <h3 className="font-semibold mb-4">How to Put a Lead on a Seller Report</h3>
               <ol className="space-y-4">
                 {[
-                  'Open the lead\'s profile in your Ylopo dashboard.',
-                  'Click the "Seller" tab or scroll to the Seller section.',
-                  'Click "Add Property" and enter the lead\'s home address.',
+                  'Add the address to FUB, then open the lead\'s profile in Ylopo Stars.',
+                  'Click the dollar sign icon to add to the seller report.',
+                  'Label with the property address.',
+                  'Enter the address in the address box.',
                   'Ylopo will pull the property data and generate an estimated value.',
-                  'Toggle the "Send Seller Report" switch to ON.',
-                  'Set the delivery frequency  -  Monthly is the standard for long-term nurture.',
+                  'Set the delivery frequency - monthly is the standard for long-term nurture.',
                   'Click Save. The lead will begin receiving automated monthly reports with their home\'s estimated value.',
                 ].map((step, i) => (
                   <div key={i} className="flex gap-3">
@@ -284,10 +284,9 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
               <div className="space-y-3">
                 {[
                   { label: 'Estimated Value', desc: 'The AVM (Automated Valuation Model) for their home. Not the same as a CMA, but a useful starting point for the conversation.' },
-                  { label: 'Equity Estimate', desc: 'Estimated home equity based on purchase price and current valuation. This number makes sellers act  -  show it prominently when you follow up.' },
-                  { label: 'Active Buyers', desc: 'How many buyers are currently searching for a home matching theirs. High buyer demand = a great opening for a listing conversation.' },
+                  { label: 'Equity Estimate', desc: 'Estimated home equity based on purchase price and current valuation.' },
+                  { label: 'Active Buyers', desc: 'How many buyers are currently searching for a home matching theirs. High buyer demand is a great opening for a listing conversation.' },
                   { label: 'Market Trends', desc: 'Local price trends and days-on-market data for their area.' },
-                  { label: 'View Count', desc: 'How many times this seller has viewed their own report. Multiple views = high intent. That is your follow-up trigger.' },
                 ].map(item => (
                   <div key={item.label} className="flex gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-zinc-900 mt-2 shrink-0"></div>
@@ -300,11 +299,21 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
               </div>
             </div>
 
-            <div className="bg-zinc-900 text-white rounded-xl p-5">
-              <p className="text-sm font-semibold mb-1">Follow-Up Trigger</p>
-              <p className="text-sm text-zinc-300">
-                When a seller views their report 2+ times in a week, call them immediately.
-                Open with: <em>&ldquo;Hey [Name], I saw you were checking out your home value  -  did the numbers surprise you at all?&rdquo;</em>
+            <div className="bg-white border border-zinc-200 rounded-xl p-5">
+              <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-3">Seller Report Walkthrough</p>
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  src="https://www.loom.com/embed/ce0afdb17c804a3490259b4773b8a900"
+                  className="absolute inset-0 w-full h-full rounded-lg"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+
+            <div className="bg-zinc-50 border border-zinc-200 rounded-xl p-5">
+              <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Pro Tip</p>
+              <p className="text-sm text-zinc-600">
+                Make sure every lead or past client with a property address is on this report. Always follow up when someone is engaging with the report - doing this will increase your number of conversations, appointments, and deals.
               </p>
             </div>
 
