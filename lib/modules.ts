@@ -3,9 +3,9 @@ export const MODULES = [
     id: 'exp-signup',
     number: 1,
     title: 'First Steps',
-    description: 'Submit your info and complete your eXp sign-up to join the team.',
+    description: 'Submit your info and acknowledge your team commitments.',
     href: '/modules/exp-signup',
-    totalSections: 3,
+    totalSections: 5,
   },
   {
     id: 'follow-up-boss',
@@ -38,5 +38,13 @@ export const MODULES = [
     description: 'Step-by-step walkthroughs for RPA, Listing Agreement, AVID, and more.',
     href: '/modules/contracts',
     totalSections: 7,
+  },
+  {
+    id: 'exp-resources',
+    number: 6,
+    title: 'eXp Resources',
+    description: 'Links to all team and eXp platform resources in one place.',
+    href: '/modules/exp-resources',
+    totalSections: 1,
   },
 ]

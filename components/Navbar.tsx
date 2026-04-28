@@ -14,6 +14,7 @@ const navLinks = [
   { href: '/modules/ylopo', label: 'Ylopo' },
   { href: '/modules/lead-conversion', label: 'Lead Conversion' },
   { href: '/modules/contracts', label: 'Contracts' },
+  { href: '/modules/exp-resources', label: 'eXp Resources' },
 ]
 
 export default function Navbar({ isAdmin = false }: { isAdmin?: boolean }) {
