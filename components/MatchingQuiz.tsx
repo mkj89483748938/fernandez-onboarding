@@ -71,7 +71,7 @@ export default function MatchingQuiz({ pairs, onPass }: Props) {
     <div className="bg-white border border-zinc-200 rounded-xl overflow-hidden">
       <div className="flex items-center justify-between px-5 py-4 border-b border-zinc-100">
         <div>
-          <p className="text-sm font-semibold">Quiz — Match the Stage</p>
+          <p className="text-sm font-semibold">Quiz  -  Match the Stage</p>
           <p className="text-xs text-zinc-400 mt-0.5">Click a stage name, then click its matching description.</p>
         </div>
         <div className="flex items-center gap-3">

@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "The Fernandez Group — Agent Onboarding",
+  title: "The Fernandez Group  -  Agent Onboarding",
   description: "Agent onboarding portal for The Fernandez Group at eXp Realty",
 };
 

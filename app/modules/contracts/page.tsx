@@ -69,14 +69,14 @@ export default async function ContractsPage({ searchParams }: { searchParams: Pr
               <p className="text-sm text-zinc-500">California Association of REALTORS® Form RPA</p>
               <p className="text-sm text-zinc-600 mt-3 leading-relaxed">
                 The RPA is the primary contract used when a buyer makes an offer on a property in California.
-                It outlines all terms of the transaction — price, contingencies, timelines, and conditions.
+                It outlines all terms of the transaction  -  price, contingencies, timelines, and conditions.
                 Every field matters. Read each section carefully before completing.
               </p>
             </div>
 
             {[
               {
-                section: 'Section 1 — Offer & Purchase Price',
+                section: 'Section 1  -  Offer & Purchase Price',
                 fields: [
                   { field: 'Purchase Price', how: 'Enter the full dollar amount the buyer is offering. Write it in both numerals and words.' },
                   { field: 'Down Payment', how: 'Enter the buyer\'s down payment amount. This should match what the lender confirmed.' },
@@ -84,7 +84,7 @@ export default async function ContractsPage({ searchParams }: { searchParams: Pr
                 ],
               },
               {
-                section: 'Section 2 — Finance Terms',
+                section: 'Section 2  -  Finance Terms',
                 fields: [
                   { field: 'Loan Type', how: 'Check Conventional, FHA, VA, or Other. Confirm with buyer\'s lender.' },
                   { field: 'Loan-to-Value Ratio', how: 'Loan amount divided by purchase price. Usually 80%, 90%, or 95%.' },
@@ -92,14 +92,14 @@ export default async function ContractsPage({ searchParams }: { searchParams: Pr
                 ],
               },
               {
-                section: 'Section 3 — Closing & Possession',
+                section: 'Section 3  -  Closing & Possession',
                 fields: [
                   { field: 'Close of Escrow Date', how: 'Enter the target closing date. Standard is 21–30 days for conventional, 30–45 for FHA/VA. Confirm with lender.' },
                   { field: 'Possession', how: 'Typically "at close of escrow." If seller needs rent-back, negotiate separately.' },
                 ],
               },
               {
-                section: 'Section 4 — Contingencies',
+                section: 'Section 4  -  Contingencies',
                 fields: [
                   { field: 'Loan Contingency', how: 'Standard 21 days. Do not waive without discussing with the team lead and your buyer.' },
                   { field: 'Appraisal Contingency', how: 'Standard 17 days. Protects buyer if home appraises below purchase price.' },
@@ -107,7 +107,7 @@ export default async function ContractsPage({ searchParams }: { searchParams: Pr
                 ],
               },
               {
-                section: 'Section 5 — Included Items & Personal Property',
+                section: 'Section 5  -  Included Items & Personal Property',
                 fields: [
                   { field: 'Items Included', how: 'Check all built-in appliances that convey with the property (dishwasher, range, etc.). Stoves and refrigerators should be called out explicitly if included.' },
                   { field: 'Personal Property', how: 'Any non-fixture items the seller is including. List them specifically.' },
@@ -117,7 +117,7 @@ export default async function ContractsPage({ searchParams }: { searchParams: Pr
                 section: 'Signatures & Dates',
                 fields: [
                   { field: 'Buyer Signature + Date', how: 'All buyers must sign and date. Electronic signatures via DocuSign are acceptable.' },
-                  { field: 'Offer Expiration', how: 'Enter the date and time the offer expires. Give seller enough time to respond — typically 24–48 hours.' },
+                  { field: 'Offer Expiration', how: 'Enter the date and time the offer expires. Give seller enough time to respond  -  typically 24–48 hours.' },
                 ],
               },
             ].map(sec => (
@@ -185,7 +185,7 @@ export default async function ContractsPage({ searchParams }: { searchParams: Pr
               {
                 section: 'Commission',
                 fields: [
-                  { field: 'Total Commission %', how: 'Discuss with your team lead — commission structure varies. Do not quote a rate until you have confirmed with the team.' },
+                  { field: 'Total Commission %', how: 'Discuss with your team lead  -  commission structure varies. Do not quote a rate until you have confirmed with the team.' },
                   { field: 'Buyer\'s Agent Compensation', how: 'Since the NAR settlement (August 2024), buyer agent compensation is no longer listed on MLS. Discuss with team lead how to handle this.' },
                 ],
               },
@@ -235,7 +235,7 @@ export default async function ContractsPage({ searchParams }: { searchParams: Pr
               <h2 className="font-semibold mb-1">Agent Visual Inspection Disclosure (AVID)</h2>
               <p className="text-sm text-zinc-500">California Association of REALTORS® Form AVID</p>
               <p className="text-sm text-zinc-600 mt-3 leading-relaxed">
-                The AVID documents what you — the agent — visually observed during your inspection of the property.
+                The AVID documents what you  -  the agent  -  visually observed during your inspection of the property.
                 This is not the same as a home inspection report. It is your personal disclosure of visible conditions.
                 It protects you legally and informs the buyer.
               </p>
@@ -270,10 +270,10 @@ export default async function ContractsPage({ searchParams }: { searchParams: Pr
               {
                 section: 'Items & Conditions Observed',
                 fields: [
-                  { field: 'Roof', how: 'Note visible condition — missing shingles, sagging, water stains on ceiling that indicate a roof issue.' },
-                  { field: 'Foundation / Structure', how: 'Note visible cracks, settlement, uneven floors. Do not speculate — describe only what you see.' },
+                  { field: 'Roof', how: 'Note visible condition  -  missing shingles, sagging, water stains on ceiling that indicate a roof issue.' },
+                  { field: 'Foundation / Structure', how: 'Note visible cracks, settlement, uneven floors. Do not speculate  -  describe only what you see.' },
                   { field: 'Plumbing', how: 'Note visible leaks under sinks, water stains, corrosion, or low water pressure you observed.' },
-                  { field: 'Electrical', how: 'Note visible issues — exposed wiring, non-functioning outlets, outdated panel.' },
+                  { field: 'Electrical', how: 'Note visible issues  -  exposed wiring, non-functioning outlets, outdated panel.' },
                   { field: 'HVAC', how: 'Note age if visible, whether units appeared to function, any unusual sounds.' },
                   { field: 'Water Intrusion / Mold', how: 'Any visible staining, discoloration, or odor suggesting moisture. Disclose everything you see.' },
                   { field: 'Additional Items', how: 'Anything else you observed that a buyer would want to know. Better to over-disclose than under-disclose.' },
@@ -313,7 +313,7 @@ export default async function ContractsPage({ searchParams }: { searchParams: Pr
               <p className="text-sm text-zinc-600 mt-3 leading-relaxed">
                 The Request for Repair is used by the buyer (during the inspection contingency period) to request
                 that the seller make repairs, provide credits, or lower the price based on issues found during
-                the home inspection. This is a negotiation document — word it carefully.
+                the home inspection. This is a negotiation document  -  word it carefully.
               </p>
             </div>
 
@@ -326,7 +326,7 @@ export default async function ContractsPage({ searchParams }: { searchParams: Pr
                 ],
               },
               {
-                section: 'Request Options — Choose One',
+                section: 'Request Options  -  Choose One',
                 fields: [
                   { field: 'Option 1: Repairs', how: 'The seller agrees to complete specific repairs before close of escrow. List each item clearly. Be specific: "Replace water heater in garage" not "fix plumbing."' },
                   { field: 'Option 2: Credit in Lieu of Repairs', how: 'Request a credit to the buyer\'s closing costs instead of repairs. Seller credits can be used to buy down the rate or cover closing costs. Confirm the credit amount with your lender (loan type limits apply).' },
@@ -337,7 +337,7 @@ export default async function ContractsPage({ searchParams }: { searchParams: Pr
                 section: 'Itemized Repair Requests',
                 fields: [
                   { field: 'List Each Item Separately', how: 'Do not bundle all repairs into one line. List each item on its own so the seller can accept some and reject others.' },
-                  { field: 'Reference the Inspection Report', how: 'State the section of the inspection report each request comes from. "Per inspection report, Section 3.2 — HVAC unit showed inadequate airflow."' },
+                  { field: 'Reference the Inspection Report', how: 'State the section of the inspection report each request comes from. "Per inspection report, Section 3.2  -  HVAC unit showed inadequate airflow."' },
                   { field: 'Use Dollar Amounts Where Possible', how: 'If you have repair bids, include them. It makes your request more credible and harder to reject.' },
                 ],
               },
@@ -416,7 +416,7 @@ export default async function ContractsPage({ searchParams }: { searchParams: Pr
               {
                 section: 'Acceptance & Expiration',
                 fields: [
-                  { field: 'Acceptance Deadline', how: 'Date and time the counter expires. Give the other party reasonable time — 24–48 hours is standard. Do not create artificial urgency that damages the negotiation.' },
+                  { field: 'Acceptance Deadline', how: 'Date and time the counter expires. Give the other party reasonable time  -  24–48 hours is standard. Do not create artificial urgency that damages the negotiation.' },
                   { field: 'Signature of Issuing Party', how: 'All sellers (or all buyers) must sign. No unsigned counters.' },
                   { field: 'Acceptance Signature', how: 'When the other party accepts, they sign and date the acceptance line. Both parties receive a fully signed copy.' },
                 ],
@@ -459,20 +459,20 @@ export default async function ContractsPage({ searchParams }: { searchParams: Pr
 
             <div className="space-y-3">
               {[
-                { phase: 'Day 1 — Open Escrow', items: [
+                { phase: 'Day 1  -  Open Escrow', items: [
                   'Send fully executed contract to escrow company',
                   'Send opening escrow email to all parties (template in next tab)',
                   'Update lead stage to "Pending" in FUB',
                   'Order Natural Hazard Disclosure (NHD) report',
                   'Confirm buyer\'s lender has the contract and appraisal is ordered',
                 ]},
-                { phase: 'Days 1–3 — Buyer Duties', items: [
+                { phase: 'Days 1–3  -  Buyer Duties', items: [
                   'Buyer signs escrow instructions',
                   'Buyer submits earnest money deposit (EMD) per contract terms',
                   'Buyer provides proof of funds / verification of down payment',
                   'Schedule home inspection (within inspection contingency period)',
                 ]},
-                { phase: 'Days 3–17 — Inspection Period', items: [
+                { phase: 'Days 3–17  -  Inspection Period', items: [
                   'Home inspection completed',
                   'Review inspection report with buyer / seller',
                   'Submit Request for Repair if applicable',
@@ -480,14 +480,14 @@ export default async function ContractsPage({ searchParams }: { searchParams: Pr
                   'Seller completes TDS and SPQ if not already done',
                   'Review all seller disclosures with buyer; buyer signs receipt',
                 ]},
-                { phase: 'Days 14–21 — Appraisal & Loan', items: [
+                { phase: 'Days 14–21  -  Appraisal & Loan', items: [
                   'Appraisal ordered and scheduled',
-                  'Appraisal report received — confirm value meets or exceeds purchase price',
+                  'Appraisal report received  -  confirm value meets or exceeds purchase price',
                   'Lender provides loan approval / clear to close',
                   'Remove loan contingency (with buyer\'s written authorization)',
                   'Remove appraisal contingency (with buyer\'s written authorization)',
                 ]},
-                { phase: 'Days 17–25 — Final Steps', items: [
+                { phase: 'Days 17–25  -  Final Steps', items: [
                   'Confirm final loan documents are at title',
                   'Schedule buyer signing with title/notary',
                   'Schedule final walkthrough with buyer (1–2 days before close)',
@@ -568,7 +568,7 @@ Hi everyone,
 I am writing to introduce the parties for the above transaction and confirm that escrow has been opened.
 
 PROPERTY: [Full Property Address]
-ESCROW #: [Escrow Number — obtain from escrow officer]
+ESCROW #: [Escrow Number  -  obtain from escrow officer]
 PROJECTED CLOSE: [Close of Escrow Date]
 
 PARTIES:

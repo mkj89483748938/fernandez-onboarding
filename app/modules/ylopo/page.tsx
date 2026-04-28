@@ -67,7 +67,7 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
               <p className="text-sm text-zinc-600 leading-relaxed">
                 Ylopo is a suite of tools designed to assist your lead nurture and help you convert more leads.
                 It combines AI-powered outreach, dynamic ad campaigns, buyer and seller search sites, and
-                behavioral analytics — all connected to your Follow Up Boss CRM.
+                behavioral analytics  -  all connected to your Follow Up Boss CRM.
               </p>
               <p className="text-sm text-zinc-600 leading-relaxed">
                 When a lead registers on your site, Ylopo&apos;s AI (Raiya) begins automated text and email
@@ -75,7 +75,7 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
                 first contact; you handle the conversion.
               </p>
               <p className="text-sm text-zinc-600 leading-relaxed">
-                Think of Ylopo as your 24/7 assistant — it never stops working your database, keeping leads
+                Think of Ylopo as your 24/7 assistant  -  it never stops working your database, keeping leads
                 warm and surfacing the ones who are ready to act. The agents who win with Ylopo are the ones
                 who respond fast when it flags an engaged lead.
               </p>
@@ -109,7 +109,7 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
               <p className="text-sm text-zinc-600 leading-relaxed">
                 Ylopo Stars is the command center for your leads. It syncs your Follow Up Boss account and your website,
                 allowing you to send listings, generate home equity reports, get AI to engage stale leads, and remarket
-                to your database. Make sure all of your leads are in Stars and have a Stars link — found under Custom
+                to your database. Make sure all of your leads are in Stars and have a Stars link  -  found under Custom
                 Fields in Follow Up Boss.
               </p>
             </div>
@@ -121,7 +121,7 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
                   { text: 'Log in to your Ylopo dashboard at stars.ylopo.com.', link: { label: 'stars.ylopo.com', href: 'https://stars.ylopo.com' } },
                   { text: 'Upon login you will see an Add Lead button in green on the top left.' },
                   { text: 'Click Add, then select Pull Details from Follow Up Boss.' },
-                  { text: "Paste the lead's URL from Follow Up Boss — go to the lead's profile, copy the website address, and paste it into the box." },
+                  { text: "Paste the lead's URL from Follow Up Boss  -  go to the lead's profile, copy the website address, and paste it into the box." },
                   { text: 'Click Pull Details.' },
                   { text: 'You can create a search by checking the box, or do this later.' },
                   { text: 'Click Submit and Save.' },
@@ -151,7 +151,7 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
             <div className="bg-zinc-50 border border-zinc-200 rounded-xl p-5">
               <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Pro Tip</p>
               <p className="text-sm text-zinc-600">
-                Check your Smart Lists in Follow Up Boss daily — they will identify your most engaged leads right now.
+                Check your Smart Lists in Follow Up Boss daily  -  they will identify your most engaged leads right now.
               </p>
             </div>
 
@@ -165,11 +165,11 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
         {activeTab === 'listing-alerts' && (
           <div className="space-y-5">
             <div className="bg-white border border-zinc-200 rounded-xl p-6 space-y-3">
-              <h2 className="font-semibold">Listing Alerts & Sending Listing Links</h2>
+              <h2 className="font-semibold">Listing Alerts &amp; Sending Listing Links</h2>
               <p className="text-sm text-zinc-600 leading-relaxed">
                 Listing alerts automatically email your buyer leads when a new property matches their search
                 criteria. They keep your leads engaged and bring them back to your site without you having
-                to manually send properties every day.
+                to manually send properties every day. Their activity will sync to FUB.
               </p>
             </div>
 
@@ -177,13 +177,13 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
               <h3 className="font-semibold mb-4">How to Set Up a Listing Alert for a Buyer</h3>
               <ol className="space-y-4">
                 {[
-                  'Open the lead\'s profile in your Ylopo dashboard.',
-                  'Click on the Search Criteria tab in their profile.',
-                  'Click "Add Search" to create a new saved search.',
-                  'Enter the search parameters: city, zip code, price range, bedrooms, bathrooms, and property type.',
-                  'Toggle the "Email Alerts" switch to ON so the lead receives emails when matching homes hit the market.',
-                  'Set the alert frequency — "Instant" for hot buyers, "Daily" for warm/cold.',
-                  'Click Save. The lead will now receive automated listing emails that link back to your buyer site.',
+                  'Open the lead in FUB.',
+                  'Click on the Ylopo Stars link under Custom Fields.',
+                  'If they do not have a listing alert, click the house icon to create a new one.',
+                  'If they do have one, you will see it in the Listing Alerts tab and can click Edit there.',
+                  'Enter the search parameters.',
+                  'Set the alert frequency (most agents will do daily here).',
+                  'Click Save. The lead will now receive automated listing emails that link back to your site.',
                 ].map((step, i) => (
                   <div key={i} className="flex gap-3">
                     <span className="flex items-center justify-center w-6 h-6 rounded-full bg-zinc-900 text-white text-xs font-semibold shrink-0 mt-0.5">{i + 1}</span>
@@ -193,26 +193,19 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
               </ol>
             </div>
 
-            <div className="bg-white border border-zinc-200 rounded-xl p-6">
-              <h3 className="font-semibold mb-4">How to Send a Listing Link Directly to a Client</h3>
-              <ol className="space-y-4">
-                {[
-                  'Find the property on your buyer IDX site (e.g., matt.buyinginoc.com).',
-                  'Navigate to the property listing page.',
-                  'Copy the URL from your browser — this is a tracked link that connects the view back to the lead in your database.',
-                  'Text or email this link directly to your client. When they click it, their activity is logged in Ylopo and FUB.',
-                  'In FUB, log that you sent them a property and note what they liked about it.',
-                ].map((step, i) => (
-                  <div key={i} className="flex gap-3">
-                    <span className="flex items-center justify-center w-6 h-6 rounded-full bg-zinc-900 text-white text-xs font-semibold shrink-0 mt-0.5">{i + 1}</span>
-                    <p className="text-sm text-zinc-600 leading-relaxed">{step}</p>
-                  </div>
-                ))}
-              </ol>
+            <div className="bg-white border border-zinc-200 rounded-xl p-5">
+              <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-3">Listing Alert Walkthrough</p>
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  src="https://www.loom.com/embed/a0b930269af04b1aa63ba9ac1941d850"
+                  className="absolute inset-0 w-full h-full rounded-lg"
+                  allowFullScreen
+                />
+              </div>
             </div>
 
             <div className="bg-white border border-zinc-200 rounded-xl p-6 space-y-3">
-              <h3 className="font-semibold">Listing Alert Links — Share a Direct Search Link</h3>
+              <h3 className="font-semibold">Listing Alert Links - Share a Direct Search Link</h3>
               <p className="text-sm text-zinc-600 leading-relaxed">
                 There is a new feature in Ylopo Stars listing alerts. Under <strong>Saved Search &amp; Listing Alerts</strong>,
                 when you select Listing Alerts, you will see a new link button. Once a listing alert is created,
@@ -223,22 +216,28 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
                 while automatically logging the lead in. As the lead changes their search parameters, Ylopo
                 dynamically updates the listing alert to reflect their engagement.
               </p>
+              <p className="text-sm text-zinc-600 leading-relaxed">
+                This link is evergreen and will refresh as often as our website does. This becomes your
+                client&apos;s custom search portal direct link - use this and keep your clients on your site,
+                not other portal sites.
+              </p>
               <div className="bg-red-50 border border-red-200 rounded-lg p-3">
                 <p className="text-xs font-semibold text-red-700 mb-1">Important</p>
                 <p className="text-sm text-red-700">
-                  Do <strong>not</strong> click on this link yourself — it will register as lead engagement
+                  Do <strong>not</strong> click on this link yourself. It will register as lead engagement
                   and skew their behavioral data in Ylopo.
                 </p>
               </div>
-              <div className="pt-1">
-                <a
-                  href="https://www.loom.com/share/7149c8aa55434ad2bca1f1e99bf66d2a"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-zinc-900 underline underline-offset-2"
-                >
-                  Watch the walkthrough video by Gabe Cordova →
-                </a>
+            </div>
+
+            <div className="bg-white border border-zinc-200 rounded-xl p-5">
+              <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-3">Listing Alert Link Walkthrough</p>
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  src="https://www.loom.com/embed/7149c8aa55434ad2bca1f1e99bf66d2a"
+                  className="absolute inset-0 w-full h-full rounded-lg"
+                  allowFullScreen
+                />
               </div>
             </div>
 
@@ -269,7 +268,7 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
                   'Click "Add Property" and enter the lead\'s home address.',
                   'Ylopo will pull the property data and generate an estimated value.',
                   'Toggle the "Send Seller Report" switch to ON.',
-                  'Set the delivery frequency — Monthly is the standard for long-term nurture.',
+                  'Set the delivery frequency  -  Monthly is the standard for long-term nurture.',
                   'Click Save. The lead will begin receiving automated monthly reports with their home\'s estimated value.',
                 ].map((step, i) => (
                   <div key={i} className="flex gap-3">
@@ -285,7 +284,7 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
               <div className="space-y-3">
                 {[
                   { label: 'Estimated Value', desc: 'The AVM (Automated Valuation Model) for their home. Not the same as a CMA, but a useful starting point for the conversation.' },
-                  { label: 'Equity Estimate', desc: 'Estimated home equity based on purchase price and current valuation. This number makes sellers act — show it prominently when you follow up.' },
+                  { label: 'Equity Estimate', desc: 'Estimated home equity based on purchase price and current valuation. This number makes sellers act  -  show it prominently when you follow up.' },
                   { label: 'Active Buyers', desc: 'How many buyers are currently searching for a home matching theirs. High buyer demand = a great opening for a listing conversation.' },
                   { label: 'Market Trends', desc: 'Local price trends and days-on-market data for their area.' },
                   { label: 'View Count', desc: 'How many times this seller has viewed their own report. Multiple views = high intent. That is your follow-up trigger.' },
@@ -305,7 +304,7 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
               <p className="text-sm font-semibold mb-1">Follow-Up Trigger</p>
               <p className="text-sm text-zinc-300">
                 When a seller views their report 2+ times in a week, call them immediately.
-                Open with: <em>&ldquo;Hey [Name], I saw you were checking out your home value — did the numbers surprise you at all?&rdquo;</em>
+                Open with: <em>&ldquo;Hey [Name], I saw you were checking out your home value  -  did the numbers surprise you at all?&rdquo;</em>
               </p>
             </div>
 
@@ -322,7 +321,7 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
               <h2 className="font-semibold">Taking Over AI Conversations</h2>
               <p className="text-sm text-zinc-600 leading-relaxed">
                 Ylopo&apos;s AI (Raiya) handles the first wave of outreach via text message. When a lead responds,
-                the AI continues the conversation until the lead asks to speak with a human — or until you
+                the AI continues the conversation until the lead asks to speak with a human  -  or until you
                 take over manually. Knowing when and how to take over is critical.
               </p>
             </div>
@@ -332,8 +331,8 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
               <div className="space-y-3">
                 {[
                   'The lead asks a question the AI cannot answer (pricing specifics, showing availability, area recommendations).',
-                  'The lead replies with emotional language — frustration, excitement, urgency. A human needs to respond.',
-                  'The lead says "can I talk to someone" or "call me" — take over immediately.',
+                  'The lead replies with emotional language  -  frustration, excitement, urgency. A human needs to respond.',
+                  'The lead says "can I talk to someone" or "call me"  -  take over immediately.',
                   'The lead has replied 2+ times. This is an engaged lead. Jump in.',
                   'You receive an AI Replies smart list alert in FUB. That is your signal.',
                 ].map((item, i) => (
@@ -349,11 +348,11 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
               <h3 className="font-semibold mb-4">How to Take Over an AI Conversation</h3>
               <ol className="space-y-4">
                 {[
-                  'Open the lead in Follow Up Boss — not Ylopo. The conversation thread syncs to FUB.',
+                  'Open the lead in Follow Up Boss  -  not Ylopo. The conversation thread syncs to FUB.',
                   'Read the full AI conversation from the beginning so you have context.',
                   'Click "Pause AI" or toggle off AI outreach for this lead in FUB or Ylopo.',
-                  'Call the lead first. Do not text back through the AI thread — break the pattern and call.',
-                  'If they do not answer, send a personal text from your number: "Hi [Name], this is [Your Name] — I saw your message. Do you have 5 minutes to chat today?"',
+                  'Call the lead first. Do not text back through the AI thread  -  break the pattern and call.',
+                  'If they do not answer, send a personal text from your number: "Hi [Name], this is [Your Name]  -  I saw your message. Do you have 5 minutes to chat today?"',
                   'Log your call attempt in FUB immediately.',
                 ].map((step, i) => (
                   <div key={i} className="flex gap-3">
@@ -415,8 +414,8 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
               <div className="space-y-3">
                 {[
                   { scenario: 'Social media bio', action: 'Put your buyer site in your Instagram, Facebook, and LinkedIn bio.' },
-                  { scenario: 'New buyer lead calls in', action: 'Text them your buyer site link immediately after the call: "Here\'s my search site — set up your search and you\'ll get alerts for new listings."' },
-                  { scenario: 'Potential seller in your database', action: 'Text them the seller site: "I have a tool that shows your home\'s current value in 30 seconds — [yourname].buyinginoc.com/seller"' },
+                  { scenario: 'New buyer lead calls in', action: 'Text them your buyer site link immediately after the call: "Here\'s my search site  -  set up your search and you\'ll get alerts for new listings."' },
+                  { scenario: 'Potential seller in your database', action: 'Text them the seller site: "I have a tool that shows your home\'s current value in 30 seconds  -  [yourname].buyinginoc.com/seller"' },
                   { scenario: 'Door knocking or open house', action: 'Have your seller site URL on your business card. It is a natural, low-pressure way to capture seller leads.' },
                   { scenario: 'Email signature', action: 'Add both links to your email signature with clear labels.' },
                 ].map(item => (

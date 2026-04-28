@@ -7,16 +7,16 @@ import StagesComplete from '@/components/StagesComplete'
 const MODULE_ID = 'follow-up-boss'
 
 const ALL_STAGES = [
-  { name: 'Lead', timeline: 'New — no contact yet', ai: true, desc: 'Brand new lead that has not been spoken with yet. AI immediately begins outreach. Your goal is to call within 5 minutes of the lead coming in.' },
-  { name: 'A Hot', timeline: 'Within 90 days', ai: false, desc: 'Timeline is within 90 days. Call weekly and stay top of mind. This is your active pipeline — treat it like a job.' },
+  { name: 'Lead', timeline: 'New  -  no contact yet', ai: true, desc: 'Brand new lead that has not been spoken with yet. AI immediately begins outreach. Your goal is to call within 5 minutes of the lead coming in.' },
+  { name: 'A Hot', timeline: 'Within 90 days', ai: false, desc: 'Timeline is within 90 days. Call weekly and stay top of mind. This is your active pipeline  -  treat it like a job.' },
   { name: 'B Warm', timeline: '3–6 months', ai: false, desc: 'Timeline is 3–6 months out. Communicate every two weeks. Keep delivering value and watch for any change in urgency.' },
   { name: 'C Cold', timeline: '6+ months', ai: false, desc: 'Timeline is 6+ months. Cold leads are on action plans and remarketed via Ylopo. Check in monthly and let the system do the heavy lifting.' },
-  { name: 'Contact', timeline: 'Long-term nurture', ai: true, desc: 'Not buying or selling anytime soon — just curious, likes looking at homes, already has an agent, or already bought. AI stays on for long-term nurture. You can still call manually.' },
+  { name: 'Contact', timeline: 'Long-term nurture', ai: true, desc: 'Not buying or selling anytime soon  -  just curious, likes looking at homes, already has an agent, or already bought. AI stays on for long-term nurture. You can still call manually.' },
   { name: 'Bad Phone Number', timeline: 'Moves to Contact', ai: false, desc: 'This will automatically move to the Contact stage and start the bad phone number automation. Verify their contact info and update it before moving them back to Lead.' },
-  { name: 'Renter', timeline: 'Future buyer', ai: false, desc: 'Only looking to rent for now. Future buyer — keep them in your database and set a reminder to check in when their lease is likely up.' },
-  { name: 'Appointment Set', timeline: 'Meeting on calendar', ai: false, desc: 'An appointment has been set — whether a listing appointment or a home showing. Move here the moment it is scheduled.' },
+  { name: 'Renter', timeline: 'Future buyer', ai: false, desc: 'Only looking to rent for now. Future buyer  -  keep them in your database and set a reminder to check in when their lease is likely up.' },
+  { name: 'Appointment Set', timeline: 'Meeting on calendar', ai: false, desc: 'An appointment has been set  -  whether a listing appointment or a home showing. Move here the moment it is scheduled.' },
   { name: 'Met With Client', timeline: 'Consulted', ai: false, desc: 'You have met with this client but they are not yet actively shopping. Keep the relationship warm with regular personal follow-up.' },
-  { name: 'Active Client', timeline: 'Actively working', ai: false, desc: 'Listing is signed or buyer is actively shopping for homes with you. This is your relationship — manage it personally.' },
+  { name: 'Active Client', timeline: 'Actively working', ai: false, desc: 'Listing is signed or buyer is actively shopping for homes with you. This is your relationship  -  manage it personally.' },
   { name: 'Pending', timeline: 'In escrow', ai: false, desc: 'Fully executed contract and in escrow. Move here the day you open escrow.' },
   { name: 'Closed', timeline: 'Transaction complete', ai: false, desc: 'Deal is done. Move here on close of escrow. Start your past-client nurture and ask for a review and referral.' },
   { name: 'Trash', timeline: 'Admin only', ai: false, desc: 'DO NOT trash leads yourself. If you think a lead should go here, notify an admin. This designation is admin-only.' },
@@ -25,7 +25,7 @@ const ALL_STAGES = [
 const SMART_LISTS = [
   { name: 'New', desc: 'All leads that just came in and have not been contacted yet. Work this list first every day.' },
   { name: 'Important', desc: 'Leads you have manually flagged as high priority. Use this to bookmark your most engaged prospects.' },
-  { name: 'AI Replies', desc: 'Leads where Ylopo or FUB AI received a response. These are warm — call them within 5 minutes of the reply.' },
+  { name: 'AI Replies', desc: 'Leads where Ylopo or FUB AI received a response. These are warm  -  call them within 5 minutes of the reply.' },
   { name: 'Hot', desc: 'All leads in the A Hot stage. 90-day timeline. Your active pipeline.' },
   { name: 'Warm', desc: 'All leads in the B Warm stage. 3–6 month timeline. Follow up bi-weekly.' },
   { name: 'Cold', desc: 'All leads in the C Cold stage. 6+ months out. Long-term nurture managed mostly by Ylopo.' },
@@ -92,7 +92,7 @@ export default async function FollowUpBossPage({ searchParams }: { searchParams:
             <div className="bg-white border border-zinc-200 rounded-xl p-6 space-y-4">
               <h2 className="font-semibold">Why this matters</h2>
               <p className="text-sm text-zinc-600 leading-relaxed">
-                Follow Up Boss is not just a contact list — it is your legal documentation, your accountability system,
+                Follow Up Boss is not just a contact list  -  it is your legal documentation, your accountability system,
                 and your business intelligence tool. If you have a conversation with a lead and do not log it,
                 that relationship is invisible to the team and invisible to you next time you call.
               </p>
@@ -116,7 +116,7 @@ export default async function FollowUpBossPage({ searchParams }: { searchParams:
           <div className="space-y-4">
             <div className="bg-white border border-zinc-200 rounded-xl p-5">
               <p className="text-sm text-zinc-600">
-                AI only contacts leads in the <strong>Lead</strong> and <strong>Contact</strong> stages. All other stages require you to manage communication personally. Keep stages accurate — a wrong stage means the AI is either working leads it shouldn&apos;t, or silent when it should be nurturing.
+                AI only contacts leads in the <strong>Lead</strong> and <strong>Contact</strong> stages. All other stages require you to manage communication personally. Keep stages accurate  -  a wrong stage means the AI is either working leads it shouldn&apos;t, or silent when it should be nurturing.
               </p>
             </div>
 
@@ -223,21 +223,21 @@ export default async function FollowUpBossPage({ searchParams }: { searchParams:
                 <p className="text-sm font-semibold mb-2">3. Use the Lead Detail Panel, Not a New Tab</p>
                 <p className="text-sm text-zinc-600 leading-relaxed">
                   Click a lead to open their detail panel on the right side of your screen. Stay in list view
-                  so you can move quickly between leads. Avoid opening each lead in a new tab — it slows you down.
+                  so you can move quickly between leads. Avoid opening each lead in a new tab  -  it slows you down.
                 </p>
               </div>
               <div className="bg-white border border-zinc-200 rounded-xl p-5">
                 <p className="text-sm font-semibold mb-2">4. Log a Note Before Moving On</p>
                 <p className="text-sm text-zinc-600 leading-relaxed">
                   After every call or text, type a quick note directly in the lead detail panel before you move to
-                  the next lead. Even two sentences — what they said, what the next step is. Future you will thank
+                  the next lead. Even two sentences  -  what they said, what the next step is. Future you will thank
                   present you.
                 </p>
               </div>
               <div className="bg-white border border-zinc-200 rounded-xl p-5">
                 <p className="text-sm font-semibold mb-2">5. Update the Stage on Every Call</p>
                 <p className="text-sm text-zinc-600 leading-relaxed">
-                  If someone went from cold to warm on this call, change the stage right now — not later.
+                  If someone went from cold to warm on this call, change the stage right now  -  not later.
                   Stage accuracy keeps the AI behaving correctly and your smart lists accurate.
                 </p>
               </div>
@@ -257,8 +257,8 @@ export default async function FollowUpBossPage({ searchParams }: { searchParams:
                 <li>1. Next Action = Today</li>
                 <li>2. AI Replies (call within 5 min of reply)</li>
                 <li>3. New Leads</li>
-                <li>4. Hot (A) — any you have not touched this week</li>
-                <li>5. Warm (B) — any you have not touched in 2 weeks</li>
+                <li>4. Hot (A)  -  any you have not touched this week</li>
+                <li>5. Warm (B)  -  any you have not touched in 2 weeks</li>
               </ol>
             </div>
 
@@ -278,7 +278,7 @@ export default async function FollowUpBossPage({ searchParams }: { searchParams:
               },
               {
                 title: 'Never skip a stage',
-                body: 'Move leads through stages in sequence. Do not jump a lead from "Lead" to "Active Client" — the middle stages matter for AI behavior and for your own tracking. Each stage tells a story about where this person is in their journey.',
+                body: 'Move leads through stages in sequence. Do not jump a lead from "Lead" to "Active Client"  -  the middle stages matter for AI behavior and for your own tracking. Each stage tells a story about where this person is in their journey.',
               },
               {
                 title: 'Log every attempted contact',
@@ -286,11 +286,11 @@ export default async function FollowUpBossPage({ searchParams }: { searchParams:
               },
               {
                 title: 'Tag strategically',
-                body: 'Tags are searchable and filter-able. Use them to group leads by neighborhood, price range, or special circumstances. Keep your tag list clean — avoid creating one-off tags you will never use again.',
+                body: 'Tags are searchable and filter-able. Use them to group leads by neighborhood, price range, or special circumstances. Keep your tag list clean  -  avoid creating one-off tags you will never use again.',
               },
               {
                 title: 'Use the mobile app when you are in the field',
-                body: 'The FUB mobile app lets you log calls and notes immediately after a showing or meeting. Do not wait until you are back at your desk — context fades fast.',
+                body: 'The FUB mobile app lets you log calls and notes immediately after a showing or meeting. Do not wait until you are back at your desk  -  context fades fast.',
               },
               {
                 title: 'Review your pipeline every Monday',

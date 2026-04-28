@@ -97,7 +97,7 @@ export default async function AdminPage() {
                       </td>
                       <td className="px-5 py-4">
                         <span className={`text-xs ${agent.license_number ? 'text-zinc-700' : 'text-zinc-300'}`}>
-                          {agent.license_number || '—'}
+                          {agent.license_number || ' - '}
                         </span>
                       </td>
                       <td className="px-5 py-4">
@@ -123,7 +123,7 @@ export default async function AdminPage() {
                                 ? 'bg-zinc-100 text-zinc-600'
                                 : 'text-zinc-300'
                             }`}>
-                              {pct === 100 ? '✓' : pct > 0 ? `${pct}%` : '—'}
+                              {pct === 100 ? '✓' : pct > 0 ? `${pct}%` : ' - '}
                             </span>
                           </td>
                         )
