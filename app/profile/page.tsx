@@ -29,6 +29,10 @@ export default function ProfilePage() {
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
   const [licenseNumber, setLicenseNumber] = useState('')
+  const [mlsId, setMlsId] = useState('')
+  const [instagram, setInstagram] = useState('')
+  const [birthdayMonth, setBirthdayMonth] = useState('')
+  const [birthdayDay, setBirthdayDay] = useState('')
 
   useEffect(() => {
     async function load() {
@@ -69,10 +73,27 @@ export default function ProfilePage() {
 
     if (updateError) {
       setError(updateError.message)
-    } else {
-      setSaved(true)
-      setTimeout(() => setSaved(false), 3000)
+      setSaving(false)
+      return
     }
+
+    await fetch('/api/submit-agent-info', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: fullName,
+        email,
+        phone,
+        license: licenseNumber,
+        mlsId,
+        instagram,
+        birthday: birthdayMonth && birthdayDay ? `${birthdayMonth}/${birthdayDay}` : '',
+      }),
+    })
+
+    localStorage.setItem('agent_setup_dismissed', '1')
+    setSaved(true)
+    setTimeout(() => setSaved(false), 3000)
     setSaving(false)
   }
 
@@ -140,6 +161,35 @@ export default function ProfilePage() {
           <div>
             <label className="block text-xs font-medium text-zinc-700 mb-1.5 uppercase tracking-wider">DRE License Number</label>
             <Input value={licenseNumber} onChange={e => setLicenseNumber(e.target.value)} placeholder="CA DRE #" className="h-10" />
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="block text-xs font-medium text-zinc-700 mb-1.5 uppercase tracking-wider">MLS ID <span className="normal-case text-zinc-400">(optional)</span></label>
+              <Input value={mlsId} onChange={e => setMlsId(e.target.value)} placeholder="MLS ID" className="h-10" />
+            </div>
+            <div>
+              <label className="block text-xs font-medium text-zinc-700 mb-1.5 uppercase tracking-wider">Instagram <span className="normal-case text-zinc-400">(optional)</span></label>
+              <Input value={instagram} onChange={e => setInstagram(e.target.value)} placeholder="@handle" className="h-10" />
+            </div>
+          </div>
+
+          <div>
+            <label className="block text-xs font-medium text-zinc-700 mb-1.5 uppercase tracking-wider">Birthday <span className="normal-case text-zinc-400">(month and day only)</span></label>
+            <div className="flex gap-2">
+              <select value={birthdayMonth} onChange={e => setBirthdayMonth(e.target.value)} className="flex-1 h-10 border border-zinc-200 rounded-md px-3 text-sm focus:outline-none focus:border-zinc-500 bg-white">
+                <option value="">Month</option>
+                {['January','February','March','April','May','June','July','August','September','October','November','December'].map((m, i) => (
+                  <option key={m} value={String(i + 1)}>{m}</option>
+                ))}
+              </select>
+              <select value={birthdayDay} onChange={e => setBirthdayDay(e.target.value)} className="w-24 h-10 border border-zinc-200 rounded-md px-3 text-sm focus:outline-none focus:border-zinc-500 bg-white">
+                <option value="">Day</option>
+                {Array.from({ length: 31 }, (_, i) => String(i + 1)).map(d => (
+                  <option key={d} value={d}>{d}</option>
+                ))}
+              </select>
+            </div>
           </div>
 
           {error && <p className="text-sm text-red-500">{error}</p>}
