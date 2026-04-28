@@ -107,9 +107,10 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
             <div className="bg-white border border-zinc-200 rounded-xl p-6 space-y-3">
               <h2 className="font-semibold">What is Ylopo Stars?</h2>
               <p className="text-sm text-zinc-600 leading-relaxed">
-                Ylopo Stars is the lead-scoring feature inside your Ylopo dashboard. It rates each lead
-                from 1–5 stars based on their search behavior — how many homes they viewed, how recently
-                they were active, and how they are engaging with your content. The more stars, the hotter the lead.
+                Ylopo Stars is the command center for your leads. It syncs your Follow Up Boss account and your website,
+                allowing you to send listings, generate home equity reports, get AI to engage stale leads, and remarket
+                to your database. Make sure all of your leads are in Stars and have a Stars link — found under Custom
+                Fields in Follow Up Boss.
               </p>
             </div>
 
@@ -117,27 +118,40 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
               <h3 className="font-semibold mb-4">How to Add a Lead to Ylopo Stars</h3>
               <ol className="space-y-4">
                 {[
-                  'Log in to your Ylopo dashboard at dashboard.ylopo.com.',
-                  'Navigate to Leads in the left sidebar.',
-                  'Use the search bar to find the lead by name, email, or phone number.',
-                  'Click on the lead\'s name to open their profile.',
-                  'In the lead profile, locate the Stars field at the top of the page.',
-                  'Click the star rating you want to assign (1–5 stars) to manually score this lead.',
-                  'The lead will now appear in your Stars-filtered view and be prioritized accordingly.',
+                  { text: 'Log in to your Ylopo dashboard at stars.ylopo.com.', link: { label: 'stars.ylopo.com', href: 'https://stars.ylopo.com' } },
+                  { text: 'Upon login you will see an Add Lead button in green on the top left.' },
+                  { text: 'Click Add, then select Pull Details from Follow Up Boss.' },
+                  { text: "Paste the lead's URL from Follow Up Boss — go to the lead's profile, copy the website address, and paste it into the box." },
+                  { text: 'Click Pull Details.' },
+                  { text: 'You can create a search by checking the box, or do this later.' },
+                  { text: 'Click Submit and Save.' },
                 ].map((step, i) => (
                   <div key={i} className="flex gap-3">
                     <span className="flex items-center justify-center w-6 h-6 rounded-full bg-zinc-900 text-white text-xs font-semibold shrink-0 mt-0.5">{i + 1}</span>
-                    <p className="text-sm text-zinc-600 leading-relaxed">{step}</p>
+                    <p className="text-sm text-zinc-600 leading-relaxed">{step.text}</p>
                   </div>
                 ))}
               </ol>
+              <p className="text-sm text-zinc-500 mt-5 leading-relaxed">
+                You are now in the lead&apos;s Stars profile. To return anytime, click the Stars link at the bottom left of the lead&apos;s record in FUB under Custom Fields.
+              </p>
+            </div>
+
+            <div className="bg-white border border-zinc-200 rounded-xl p-5">
+              <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-3">Video Walkthrough</p>
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  src="https://www.loom.com/embed/21d3f992c59a47fdae4117c505d6b981"
+                  className="absolute inset-0 w-full h-full rounded-lg"
+                  allowFullScreen
+                />
+              </div>
             </div>
 
             <div className="bg-zinc-50 border border-zinc-200 rounded-xl p-5">
               <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Pro Tip</p>
               <p className="text-sm text-zinc-600">
-                Check your 4–5 star leads every morning. These are your most engaged leads right now.
-                If Ylopo AI got a reply from a 5-star lead, that is your first call of the day — every time.
+                Check your Smart Lists in Follow Up Boss daily — they will identify your most engaged leads right now.
               </p>
             </div>
 
