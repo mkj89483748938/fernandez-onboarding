@@ -164,6 +164,17 @@ export default function ProfilePage() {
             We recommend a recent, high-resolution photo on a neutral background.
           </p>
         </div>
+
+        <div className="mt-6 bg-white border border-zinc-200 rounded-xl p-5">
+          <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Reset Setup Form</p>
+          <p className="text-sm text-zinc-600 mb-3">Show the account setup form on your dashboard again.</p>
+          <button
+            onClick={() => { localStorage.removeItem('agent_setup_dismissed'); window.location.href = '/dashboard' }}
+            className="text-xs font-medium px-3 py-1.5 border border-zinc-300 rounded-lg text-zinc-600 hover:border-zinc-500 hover:text-zinc-900 transition-colors"
+          >
+            Reset and go to dashboard
+          </button>
+        </div>
       </div>
     </div>
   )
