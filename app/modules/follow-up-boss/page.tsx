@@ -157,20 +157,70 @@ export default async function FollowUpBossPage({ searchParams }: { searchParams:
 
         {/* Smart Lists */}
         {activeTab === 'smart-lists' && (
-          <div className="space-y-6">
-            <div className="bg-white border border-zinc-200 rounded-xl p-6">
+          <div className="space-y-5">
+            <div className="bg-white border border-zinc-200 rounded-xl p-6 space-y-2">
               <p className="text-sm text-zinc-600">
-                Smart Lists are saved filtered views of your lead database. Instead of searching every time,
-                you work from these lists each day. Think of them as your work queues.
+                Smart Lists are saved filters found in the <strong>Daily Workflow</strong> folder on the left sidebar in FUB. Work through these every day - they only work if you are logging all communication and keeping stages accurate.
+              </p>
+            </div>
+
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-5">
+              <p className="text-xs font-semibold uppercase tracking-wider text-amber-700 mb-2">Nudges - Updates Required</p>
+              <p className="text-sm text-amber-900 leading-relaxed">
+                This list contains leads that have not been followed up on in the defined time frame. Call or text, or add a note in the call log if you called outside of FUB (which should not normally happen). Office leads not cleared out after a week will be re-assigned to ISAs for follow up.
               </p>
             </div>
 
             <div className="space-y-3">
-              {SMART_LISTS.map((list, i) => (
+              {[
+                {
+                  emoji: '1️⃣',
+                  name: 'New',
+                  desc: 'All new leads created in the last 14 days. Try reaching out to new leads daily for at least the first 10 days - most online leads take 7+ contact attempts to connect with, and most agents only call 1-2 times and then give up.',
+                },
+                {
+                  emoji: '2️⃣',
+                  name: 'Ylopo Priority / Handraisers',
+                  desc: 'Leads that have been active on our Ylopo site and Ylopo is telling us we should follow up based on activity. Call or text these leads and give them something of value - a listing alert link with fresh listings or a market update. Never call just to say you are touching base or checking in.',
+                },
+                {
+                  emoji: '3️⃣',
+                  name: 'Seller Report Engaged',
+                  desc: 'Leads that have engaged with the seller report. Call them and talk about it.',
+                },
+                {
+                  emoji: '4️⃣',
+                  name: 'AI Priority',
+                  desc: 'Leads that have responded to AI text or AI voice. Take over the AI text conversation and try to give them a call. These leads are active and have responded - don\'t miss out on these.',
+                },
+                {
+                  emoji: '5️⃣',
+                  name: 'Recently Active',
+                  desc: 'Leads on the site in the last week that have not been communicated with.',
+                },
+                {
+                  emoji: '6️⃣',
+                  name: 'Hot',
+                  desc: 'Your A Hot stage leads. Weekly follow up.',
+                },
+                {
+                  emoji: '7️⃣',
+                  name: 'Warm / Cold - Needs Communication',
+                  desc: 'B Warm and C Cold leads that need a touchpoint. Follow up every 21 days.',
+                },
+                {
+                  emoji: '8️⃣',
+                  name: 'Past Clients / Sphere',
+                  desc: 'Communicate every 90 days. These are your referral engine and repeat business.',
+                },
+                {
+                  emoji: '🎣',
+                  name: 'Pond',
+                  desc: 'Leads in our pond - free for all agents to call and claim once they\'ve had a valid conversation.',
+                },
+              ].map(list => (
                 <div key={list.name} className="bg-white border border-zinc-200 rounded-xl p-5 flex gap-4">
-                  <div className="flex items-center justify-center w-8 h-8 rounded-full bg-zinc-100 text-xs font-semibold text-zinc-500 shrink-0">
-                    {i + 1}
-                  </div>
+                  <div className="text-xl shrink-0 mt-0.5">{list.emoji}</div>
                   <div>
                     <p className="text-sm font-semibold mb-1">{list.name}</p>
                     <p className="text-sm text-zinc-600 leading-relaxed">{list.desc}</p>
@@ -182,8 +232,7 @@ export default async function FollowUpBossPage({ searchParams }: { searchParams:
             <div className="bg-zinc-50 border border-zinc-200 rounded-xl p-5">
               <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Pro Tip</p>
               <p className="text-sm text-zinc-600">
-                Work your lists in order: <strong>AI Replies</strong> first (hottest), then <strong>New</strong>,
-                then <strong>Hot</strong>. Save Cold and Past Clients for later in your day or week.
+                Smart lists are saved filters and rely on communications and stages being logged. Ensure that all communication is happening in FUB and that you are getting your smart lists zeroed out daily. Time block at least an hour a day to do your follow ups.
               </p>
             </div>
 
