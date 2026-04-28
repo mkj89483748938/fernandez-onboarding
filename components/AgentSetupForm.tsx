@@ -170,13 +170,13 @@ export default function AgentSetupForm({ userEmail, userName }: { userEmail?: st
 
           {error && <p className="text-xs text-red-600">{error}</p>}
 
-          <div className="flex items-center justify-between pt-1">
+          <div className="flex items-center justify-between gap-4 pt-1">
             <button type="button" onClick={handleSkipClick}
-              className="text-xs text-zinc-400 hover:text-zinc-600 text-left max-w-[200px] leading-relaxed">
+              className="px-4 py-2 rounded-lg border border-zinc-200 text-xs font-medium text-zinc-500 hover:border-zinc-400 hover:text-zinc-900 hover:bg-zinc-50 transition-colors text-left leading-snug">
               I already have access to FUB, Ylopo &amp; Slack - Skip This
             </button>
             <button type="submit" disabled={loading}
-              className="px-5 py-2 rounded-lg bg-zinc-900 text-white text-sm font-medium hover:bg-zinc-700 disabled:opacity-50 transition-colors shrink-0">
+              className="px-5 py-2 rounded-lg bg-zinc-900 text-white text-sm font-medium hover:bg-zinc-600 disabled:opacity-50 transition-colors shrink-0">
               {loading ? 'Submitting...' : 'Submit'}
             </button>
           </div>
