@@ -6,6 +6,7 @@ import { MODULES } from '@/lib/modules'
 import { getModuleProgress } from '@/lib/utils'
 import { Progress } from '@/components/ui/progress'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
+import AgentSetupForm from '@/components/AgentSetupForm'
 
 export default async function DashboardPage() {
   const supabase = await createClient()
@@ -46,6 +47,9 @@ export default async function DashboardPage() {
           <h1 className="text-3xl font-semibold tracking-tight">{name}</h1>
           <p className="text-zinc-500 mt-1 text-sm">Complete all five modules to finish your onboarding.</p>
         </div>
+
+        {/* Agent Setup Form */}
+        <AgentSetupForm userEmail={user.email} userName={profile?.full_name ?? ''} />
 
         {/* Overall Progress */}
         <div className="bg-white border border-zinc-200 rounded-xl p-6 mb-8">
@@ -88,18 +92,6 @@ export default async function DashboardPage() {
           })}
         </div>
 
-        {/* Profile reminder if incomplete */}
-        {!profile?.license_number && (
-          <div className="mt-8 border border-zinc-200 rounded-xl p-5 bg-white flex items-center gap-4">
-            <div className="flex-1">
-              <p className="text-sm font-medium">Complete your profile</p>
-              <p className="text-xs text-zinc-500 mt-0.5">Submit your license number, phone, and headshot so we can add you to all platforms.</p>
-            </div>
-            <Link href="/profile" className="text-xs font-medium underline underline-offset-2 whitespace-nowrap">
-              Go to Profile →
-            </Link>
-          </div>
-        )}
       </div>
     </div>
   )
