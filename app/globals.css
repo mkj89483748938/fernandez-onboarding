@@ -128,3 +128,40 @@
     @apply font-sans;
   }
 }
+
+/* Dark mode overrides for hardcoded zinc utility classes */
+.dark .bg-white { background-color: oklch(0.205 0 0); }
+.dark .bg-zinc-50 { background-color: oklch(0.145 0 0); }
+.dark .bg-zinc-100 { background-color: oklch(0.269 0 0); }
+.dark .bg-zinc-900 { background-color: oklch(0.922 0 0); }
+.dark .text-zinc-900 { color: oklch(0.985 0 0); }
+.dark .text-zinc-700 { color: oklch(0.871 0 0); }
+.dark .text-zinc-600 { color: oklch(0.756 0 0); }
+.dark .text-zinc-500 { color: oklch(0.623 0 0); }
+.dark .text-zinc-400 { color: oklch(0.556 0 0); }
+.dark .border-zinc-200 { border-color: oklch(1 0 0 / 12%); }
+.dark .border-zinc-100 { border-color: oklch(1 0 0 / 7%); }
+.dark .border-zinc-300 { border-color: oklch(1 0 0 / 18%); }
+.dark .bg-zinc-900.text-white { background-color: oklch(0.922 0 0); color: oklch(0.145 0 0); }
+.dark .text-white { color: oklch(0.145 0 0); }
+.dark .text-zinc-300 { color: oklch(0.439 0 0); }
+.dark .hover\:bg-zinc-100:hover { background-color: oklch(0.269 0 0); }
+.dark .hover\:border-zinc-400:hover { border-color: oklch(1 0 0 / 25%); }
+.dark .hover\:border-zinc-500:hover { border-color: oklch(1 0 0 / 30%); }
+.dark .hover\:border-zinc-900:hover { border-color: oklch(0.871 0 0); }
+.dark input, .dark select, .dark textarea {
+  background-color: oklch(0.205 0 0);
+  color: oklch(0.985 0 0);
+  border-color: oklch(1 0 0 / 12%);
+}
+.dark .bg-amber-50 { background-color: oklch(0.25 0.05 85); }
+.dark .border-amber-200 { border-color: oklch(0.5 0.1 85); }
+.dark .text-amber-700 { color: oklch(0.75 0.12 85); }
+.dark .text-amber-900 { color: oklch(0.9 0.08 85); }
+.dark .bg-emerald-50 { background-color: oklch(0.2 0.04 160); }
+.dark .border-emerald-200 { border-color: oklch(0.45 0.1 160); }
+.dark .text-emerald-700 { color: oklch(0.7 0.15 160); }
+.dark .bg-red-50 { background-color: oklch(0.22 0.05 25); }
+.dark .border-red-200 { border-color: oklch(0.45 0.1 25); }
+.dark .text-red-700 { color: oklch(0.72 0.18 25); }
+.dark nav.border-b { border-color: oklch(1 0 0 / 10%); }

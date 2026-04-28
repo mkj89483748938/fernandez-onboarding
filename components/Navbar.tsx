@@ -5,6 +5,7 @@ import { usePathname, useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
+import DarkModeToggle from '@/components/DarkModeToggle'
 
 const navLinks = [
   { href: '/dashboard', label: 'Dashboard' },
@@ -57,6 +58,7 @@ export default function Navbar({ isAdmin = false }: { isAdmin?: boolean }) {
               <Button variant="outline" size="sm" className="text-xs h-8">Admin</Button>
             </Link>
           )}
+          <DarkModeToggle />
           <Link href="/profile">
             <Button variant="outline" size="sm" className="text-xs h-8">Profile</Button>
           </Link>
