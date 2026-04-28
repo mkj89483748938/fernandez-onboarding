@@ -118,60 +118,59 @@ export default async function LeadConversionPage({ searchParams }: { searchParam
         {/* Opening Scripts */}
         {activeTab === 'opening-scripts' && (
           <div className="space-y-5">
-            <div className="bg-white border border-zinc-200 rounded-xl p-6">
-              <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-1">Rule #1</p>
-              <p className="text-lg font-semibold">Never open with &ldquo;Are you looking to buy/sell?&rdquo;</p>
-              <p className="text-sm text-zinc-500 mt-1">It kills the conversation immediately. Do not do it  -  not once.</p>
+            <div className="space-y-3">
+              <div className="bg-white border border-zinc-200 rounded-xl p-5">
+                <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-1">Rule #1</p>
+                <p className="text-base font-semibold">Never open with &ldquo;Are you looking to buy/sell?&rdquo;</p>
+                <p className="text-sm text-zinc-500 mt-1">It kills the conversation immediately. Do not do it.</p>
+              </div>
+              <div className="bg-white border border-zinc-200 rounded-xl p-5">
+                <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-1">Rule #2</p>
+                <p className="text-base font-semibold">Always be curious and interested no matter how they respond.</p>
+              </div>
+              <div className="bg-white border border-zinc-200 rounded-xl p-5">
+                <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-1">Rule #3</p>
+                <p className="text-base font-semibold">Always say who you are, your company, and why you are calling immediately.</p>
+                <p className="text-sm text-zinc-500 mt-1">Don&apos;t say things like &ldquo;Hi, is this [Name]?&rdquo; - just assume it&apos;s their name and start your call. Act as a friend.</p>
+              </div>
             </div>
 
             <div className="space-y-4">
               <div className="bg-white border border-zinc-200 rounded-xl p-6">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="text-xs font-semibold uppercase tracking-wider px-2 py-1 bg-blue-50 text-blue-700 rounded-full border border-blue-200">Buyer Lead</span>
-                  <span className="text-xs text-zinc-400">Website/search activity</span>
+                  <span className="text-xs font-semibold uppercase tracking-wider px-2 py-1 bg-blue-50 text-blue-700 rounded-full border border-blue-200">New Buyer Lead</span>
                 </div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Script</p>
                 <div className="bg-zinc-50 rounded-lg p-4 text-sm text-zinc-700 leading-relaxed italic">
-                  &ldquo;Hi [Name], this is [Your Name] with The Fernandez Group. I saw you were searching on our site  - 
-                  I just wanted to reach out and see if you found anything you liked, or if there&apos;s a specific
-                  area or type of home I can help you narrow things down on.&rdquo;
+                  &ldquo;Hi [Name], this is [Your Name] with eXp Realty. You had created an account on our home search site and I just wanted to see if you are looking to make a move in the next few months or just looking for fun?&rdquo;
                 </div>
               </div>
 
               <div className="bg-white border border-zinc-200 rounded-xl p-6">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="text-xs font-semibold uppercase tracking-wider px-2 py-1 bg-emerald-50 text-emerald-700 rounded-full border border-emerald-200">Seller Lead</span>
-                  <span className="text-xs text-zinc-400">AI conversation / home value inquiry</span>
+                  <span className="text-xs font-semibold uppercase tracking-wider px-2 py-1 bg-emerald-50 text-emerald-700 rounded-full border border-emerald-200">Seller Lead / Home Value Inquiry</span>
                 </div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Script</p>
                 <div className="bg-zinc-50 rounded-lg p-4 text-sm text-zinc-700 leading-relaxed italic">
-                  &ldquo;Hi [Name], this is [Your Name] with The Fernandez Group. You were chatting with my assistant
-                  about your home on [Street Name]. I wanted to continue that conversation and find out a bit
-                  more about what you had in mind.&rdquo;
+                  &ldquo;Hey [Name], it&apos;s [Your Name] with eXp Realty. I saw you checked out your home&apos;s value online and just wanted to see if you are thinking about making a move soon or if you were just curious?&rdquo;
                 </div>
-                <p className="text-xs text-zinc-400 mt-3">
-                  Use the street name, not the full address. Familiar, not invasive. It triggers recognition without alarm.
-                </p>
               </div>
 
               <div className="bg-white border border-zinc-200 rounded-xl p-6">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="text-xs font-semibold uppercase tracking-wider px-2 py-1 bg-zinc-100 text-zinc-700 rounded-full border border-zinc-200">Any Lead</span>
-                  <span className="text-xs text-zinc-400">Older / inactive</span>
+                  <span className="text-xs font-semibold uppercase tracking-wider px-2 py-1 bg-zinc-100 text-zinc-700 rounded-full border border-zinc-200">Any Older or Inactive Lead</span>
                 </div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Script</p>
                 <div className="bg-zinc-50 rounded-lg p-4 text-sm text-zinc-700 leading-relaxed italic">
-                  &ldquo;Hi [Name], this is [Your Name] with eXp Realty  -  you were on our website a while back.
-                  I&apos;m just calling to see if you are still on the market or if you found what you were looking for.&rdquo;
+                  &ldquo;Hi [Name], this is [Your Name] with eXp Realty - you were on our website a while back. I&apos;m just clearing out my files and wanted to see if you ever found that home you were looking for.&rdquo;
                 </div>
               </div>
             </div>
 
             <div className="bg-zinc-50 border border-zinc-200 rounded-xl p-5">
-              <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Two Responses  -  Both Work</p>
+              <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Pro Tip</p>
               <p className="text-sm text-zinc-600">
-                &ldquo;Oh yeah&rdquo; or &ldquo;Who?&rdquo;  -  either way, you are in. You have a reason to be on the phone.
-                Do not panic when they do not recognize you. Just keep going naturally.
+                If they respond with not ready, just browsing for fun, or just curious - don&apos;t get discouraged. Use this as an opportunity to ask more curiosity based questions and gather as much information as possible. Remember, we are acting as their trusted advisor.
               </p>
             </div>
 
