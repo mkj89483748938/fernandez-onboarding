@@ -2,10 +2,10 @@ export const MODULES = [
   {
     id: 'exp-signup',
     number: 1,
-    title: 'eXp Realty Signup',
-    description: 'Complete your eXp sign-up and join the team roster.',
+    title: 'First Steps',
+    description: 'Submit your info and complete your eXp sign-up to join the team.',
     href: '/modules/exp-signup',
-    totalSections: 5,
+    totalSections: 3,
   },
   {
     id: 'follow-up-boss',

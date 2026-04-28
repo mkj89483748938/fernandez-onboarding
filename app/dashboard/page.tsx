@@ -6,7 +6,6 @@ import { MODULES } from '@/lib/modules'
 import { getModuleProgress } from '@/lib/utils'
 import { Progress } from '@/components/ui/progress'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
-import AgentSetupForm from '@/components/AgentSetupForm'
 
 export default async function DashboardPage() {
   const supabase = await createClient()
@@ -47,9 +46,6 @@ export default async function DashboardPage() {
           <h1 className="text-3xl font-semibold tracking-tight">{name}</h1>
           <p className="text-zinc-500 mt-1 text-sm">Complete all five modules to finish your onboarding.</p>
         </div>
-
-        {/* Agent Setup Form */}
-        <AgentSetupForm userEmail={user.email} userName={profile?.full_name ?? ''} />
 
         {/* Overall Progress */}
         <div className="bg-white border border-zinc-200 rounded-xl p-6 mb-8">

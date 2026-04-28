@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useTransition } from 'react'
+import { useRouter } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { CheckCircle2, Circle } from 'lucide-react'
 
@@ -14,17 +15,22 @@ type Props = {
   moduleId: string
   items: Item[]
   completedIds: string[]
+  onAllCompleteHref?: string
 }
 
-export default function ProgressTracker({ moduleId, items, completedIds }: Props) {
+export default function ProgressTracker({ moduleId, items, completedIds, onAllCompleteHref }: Props) {
   const [completed, setCompleted] = useState<Set<string>>(new Set(completedIds))
   const [, startTransition] = useTransition()
+  const router = useRouter()
 
   async function toggle(sectionId: string) {
     const isNowCompleted = !completed.has(sectionId)
     setCompleted(prev => {
       const next = new Set(prev)
       isNowCompleted ? next.add(sectionId) : next.delete(sectionId)
+      if (onAllCompleteHref && isNowCompleted && next.size === items.length) {
+        setTimeout(() => router.push(onAllCompleteHref), 600)
+      }
       return next
     })
     startTransition(async () => {

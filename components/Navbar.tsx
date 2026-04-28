@@ -9,7 +9,7 @@ import DarkModeToggle from '@/components/DarkModeToggle'
 
 const navLinks = [
   { href: '/dashboard', label: 'Dashboard' },
-  { href: '/modules/exp-signup', label: 'eXp Signup' },
+  { href: '/modules/exp-signup', label: 'First Steps' },
   { href: '/modules/follow-up-boss', label: 'Follow Up Boss' },
   { href: '/modules/ylopo', label: 'Ylopo' },
   { href: '/modules/lead-conversion', label: 'Lead Conversion' },

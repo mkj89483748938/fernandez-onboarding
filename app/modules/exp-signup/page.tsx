@@ -2,6 +2,7 @@ import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 import ProgressTracker from '@/components/ProgressTracker'
+import AgentSetupForm from '@/components/AgentSetupForm'
 import { ExternalLink } from 'lucide-react'
 
 const MODULE_ID = 'exp-signup'
@@ -15,22 +16,12 @@ const CHECKLIST_ITEMS = [
   {
     id: 'step-2-dre',
     label: 'Transfer your license with the DRE',
-    description: 'Submit a Salesperson Change form (RE 214) to the California DRE to transfer your license to eXp Realty. This can be done online at dre.ca.gov. Processing typically takes 2–5 business days.',
+    description: 'Submit a Salesperson Change form (RE 214) to the California DRE to transfer your license to eXp Realty. This can be done online at dre.ca.gov. Processing typically takes 2-5 business days.',
   },
   {
     id: 'step-3-notify',
     label: 'Notify the team once your license transfer is complete',
     description: 'Text or message the team lead when the DRE transfer is confirmed. Do not start working leads until this step is done.',
-  },
-  {
-    id: 'step-4-info',
-    label: 'Submit your agent info to the team',
-    description: 'Provide your preferred name, email, phone number, DRE license number, and a professional headshot. Use the Profile page in this portal to submit your info.',
-  },
-  {
-    id: 'step-5-platforms',
-    label: 'Wait for team setup (FUB, Ylopo, Slack, roster)',
-    description: 'Once we receive your info, we will add you to Follow Up Boss, Ylopo, the team Slack workspace, and the team roster. You will receive separate invite emails for each platform.',
   },
 ]
 
@@ -46,6 +37,12 @@ export default async function ExpSignupPage() {
     .eq('module_id', MODULE_ID)
     .eq('completed', true)
 
+  const { data: profile } = await supabase
+    .from('profiles')
+    .select('full_name')
+    .eq('id', user.id)
+    .single()
+
   const completedIds = (progress ?? []).map(r => r.section_id)
 
   return (
@@ -55,13 +52,14 @@ export default async function ExpSignupPage() {
 
         <div className="mb-8">
           <p className="text-xs tracking-[0.2em] uppercase text-zinc-400 mb-1">Module 1</p>
-          <h1 className="text-2xl font-semibold tracking-tight">eXp Realty Signup</h1>
+          <h1 className="text-2xl font-semibold tracking-tight">First Steps</h1>
           <p className="text-zinc-500 text-sm mt-1">
-            Complete each step below to join eXp and get set up with the team. Check off each item as you finish it.
+            Submit your info and complete each step below to get fully set up with the team.
           </p>
         </div>
 
-        {/* Quick Link */}
+        <AgentSetupForm userEmail={user.email} userName={profile?.full_name ?? ''} />
+
         <div className="bg-zinc-900 text-white rounded-xl p-5 mb-8 flex items-center justify-between">
           <div>
             <p className="text-sm font-medium">Ready to sign up?</p>
@@ -82,9 +80,9 @@ export default async function ExpSignupPage() {
           moduleId={MODULE_ID}
           items={CHECKLIST_ITEMS}
           completedIds={completedIds}
+          onAllCompleteHref="/modules/follow-up-boss"
         />
 
-        {/* Important Note */}
         <div className="mt-8 border border-zinc-200 rounded-xl p-5 bg-white">
           <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Important</p>
           <p className="text-sm text-zinc-700 leading-relaxed">
