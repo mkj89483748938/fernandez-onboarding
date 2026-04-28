@@ -28,6 +28,7 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
     { id: 'seller-reports', label: 'Seller Reports' },
     { id: 'ai-conversations', label: 'AI Conversations' },
     { id: 'agent-site', label: 'Your Agent Site' },
+    { id: 'training', label: 'Training Resources' },
   ]
 
   return (
@@ -67,27 +68,26 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
               <p className="text-sm text-zinc-600 leading-relaxed">
                 Ylopo is a suite of tools designed to assist your lead nurture and help you convert more leads.
                 It combines AI-powered outreach, dynamic ad campaigns, buyer and seller search sites, and
-                behavioral analytics  -  all connected to your Follow Up Boss CRM.
+                behavioral analytics, all connected to your Follow Up Boss CRM.
               </p>
               <p className="text-sm text-zinc-600 leading-relaxed">
-                When a lead registers on your site, Ylopo&apos;s AI (Raiya) begins automated text and email
-                outreach immediately. Your job is to jump in the moment a lead replies. Ylopo handles the
-                first contact; you handle the conversion.
+                When a lead registers on your site, Ylopo&apos;s AI begins automated text and email outreach immediately.
               </p>
               <p className="text-sm text-zinc-600 leading-relaxed">
-                Think of Ylopo as your 24/7 assistant  -  it never stops working your database, keeping leads
-                warm and surfacing the ones who are ready to act. The agents who win with Ylopo are the ones
-                who respond fast when it flags an engaged lead.
+                Think of Ylopo + FUB as the core of your business. AI is your 24/7 assistant - it never stops
+                working to help surface the ones who are ready to act. The agents who win with Ylopo are the
+                ones who respond fast when it flags an engaged lead.
               </p>
             </div>
+
             <div className="grid grid-cols-2 gap-3">
               {[
-                { label: 'AI Nurture', desc: 'Raiya AI texts and emails leads automatically until they respond.' },
+                { label: 'AI Nurture', desc: 'AI texts and emails leads automatically until they respond.' },
                 { label: 'Buyer Search Site', desc: 'Branded IDX property search for buyers.' },
                 { label: 'Seller Reports', desc: 'Automated home value reports that track seller engagement.' },
-                { label: 'Ylopo Stars', desc: 'Lead scoring that ranks your leads by engagement level.' },
+                { label: 'Ylopo Stars', desc: 'Your command center - set leads up on listing alerts, seller reports, and take over AI conversations.' },
                 { label: 'Listing Alerts', desc: 'Auto-emails matching new listings to buyers on your criteria.' },
-                { label: 'Dynamic Ads', desc: 'Facebook and Google retargeting ads run automatically.' },
+                { label: 'Dynamic Ads', desc: 'Facebook and Google retargeting ads run automatically, bringing people back to the website.' },
               ].map(f => (
                 <div key={f.label} className="bg-white border border-zinc-200 rounded-xl p-4">
                   <p className="text-sm font-semibold mb-1">{f.label}</p>
@@ -95,6 +95,15 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
                 </div>
               ))}
             </div>
+
+            <div className="bg-white border border-zinc-200 rounded-xl p-5">
+              <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-3">Tools</p>
+              <p className="text-sm text-zinc-600 leading-relaxed">
+                Tools to capture leads and help you nurture - open house tool, heatmap, market trends, and
+                Design Studio for buyer and listing presentations.
+              </p>
+            </div>
+
             <div className="flex justify-end">
               <SectionComplete moduleId={MODULE_ID} sectionId="overview" completed={completedIds.has('overview')} nextHref="?tab=stars" />
             </div>
@@ -445,7 +454,39 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
             </div>
 
             <div className="flex justify-end">
-              <SectionComplete moduleId={MODULE_ID} sectionId="agent-site" completed={completedIds.has('agent-site')} />
+              <SectionComplete moduleId={MODULE_ID} sectionId="agent-site" completed={completedIds.has('agent-site')} nextHref="?tab=training" />
+            </div>
+          </div>
+        )}
+
+        {/* Training Resources */}
+        {activeTab === 'training' && (
+          <div className="space-y-5">
+            <div className="bg-white border border-zinc-200 rounded-xl p-6 space-y-2">
+              <h2 className="font-semibold">Training Resources</h2>
+              <p className="text-sm text-zinc-600 leading-relaxed">
+                Ylopo offers live training, webinars, and recorded sessions regularly. Use these to deepen your
+                knowledge and stay current on new features.
+              </p>
+            </div>
+
+            <a
+              href="https://ylopo.zendesk.com/hc/en-us/articles/360041251231-Upcoming-Events-and-Webinars"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-white border border-zinc-200 rounded-xl p-5 hover:border-zinc-400 transition-colors group"
+            >
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-sm font-semibold group-hover:underline">Ylopo Training Calendar</p>
+                  <p className="text-xs text-zinc-500 mt-0.5">Upcoming events, webinars, and live training sessions</p>
+                </div>
+                <span className="text-xs text-zinc-400 group-hover:text-zinc-700 transition-colors shrink-0 ml-4">Open →</span>
+              </div>
+            </a>
+
+            <div className="flex justify-end">
+              <SectionComplete moduleId={MODULE_ID} sectionId="training" completed={completedIds.has('training')} />
             </div>
           </div>
         )}

@@ -21,7 +21,7 @@ export const MODULES = [
     title: 'Ylopo',
     description: 'Stars, listing alerts, seller reports, AI conversations, and your agent site.',
     href: '/modules/ylopo',
-    totalSections: 6,
+    totalSections: 7,
   },
   {
     id: 'lead-conversion',
