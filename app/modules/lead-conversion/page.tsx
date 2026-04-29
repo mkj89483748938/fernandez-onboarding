@@ -65,7 +65,7 @@ export default async function LeadConversionPage({ searchParams }: { searchParam
         {activeTab === 'mindset' && (
           <div className="space-y-5">
             <div className="bg-[#2A7DB5] text-white rounded-xl p-8 text-center">
-              <p className="text-xs tracking-[0.2em] uppercase text-zinc-400 mb-4">The Mindset Shift</p>
+              <p className="text-xs tracking-[0.2em] uppercase text-white/70 mb-4">The Mindset Shift</p>
               <p className="text-3xl font-semibold">Stop Selling.<br />Start Consulting.</p>
             </div>
 
@@ -184,15 +184,15 @@ export default async function LeadConversionPage({ searchParams }: { searchParam
         {activeTab === 'framework' && (
           <div className="space-y-5">
             <div className="bg-[#2A7DB5] text-white rounded-xl p-6 text-center">
-              <p className="text-xs tracking-[0.2em] uppercase text-zinc-400 mb-3">The Framework</p>
+              <p className="text-xs tracking-[0.2em] uppercase text-white/70 mb-3">The Framework</p>
               <div className="flex items-center justify-center gap-4 text-lg font-semibold">
                 <span>Affirm</span>
-                <span className="text-zinc-600">→</span>
+                <span className="text-white/60">→</span>
                 <span>Understand</span>
-                <span className="text-zinc-600">→</span>
+                <span className="text-white/60">→</span>
                 <span>Pivot</span>
               </div>
-              <p className="text-zinc-400 text-sm mt-3">Three steps. Every call. Every objection. Every time.</p>
+              <p className="text-white/70 text-sm mt-3">Three steps. Every call. Every objection. Every time.</p>
             </div>
 
             <div className="space-y-4">
@@ -487,7 +487,7 @@ export default async function LeadConversionPage({ searchParams }: { searchParam
 
             <div className="bg-[#2A7DB5] text-white rounded-xl p-5">
               <p className="text-sm font-semibold mb-2">The Two-Option Close</p>
-              <p className="text-sm text-zinc-300">
+              <p className="text-sm text-white/80">
                 Always offer two time options  -  never ask &ldquo;when are you free?&rdquo;<br />
                 <em>&ldquo;I do these on Wednesdays or Saturdays  -  which works better for you?&rdquo;</em><br />
                 This keeps the momentum going and makes booking feel easy, not like a commitment.

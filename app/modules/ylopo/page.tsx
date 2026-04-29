@@ -409,9 +409,9 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
 
             <div className="grid grid-cols-1 gap-4">
               <div className="bg-[#2A7DB5] text-white rounded-xl p-6">
-                <p className="text-xs tracking-[0.15em] uppercase text-zinc-400 mb-2">Buyer Site</p>
+                <p className="text-xs tracking-[0.15em] uppercase text-white/70 mb-2">Buyer Site</p>
                 <p className="text-xl font-semibold font-mono">[yourname].buyinginoc.com</p>
-                <p className="text-sm text-zinc-300 mt-2">
+                <p className="text-sm text-white/80 mt-2">
                   This is a full IDX property search site for buyers. Every lead who registers here
                   is connected to you in FUB and Ylopo. Share this when someone mentions buying.
                 </p>
