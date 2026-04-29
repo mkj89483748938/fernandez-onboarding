@@ -249,66 +249,37 @@ export default async function FollowUpBossPage({ searchParams }: { searchParams:
               <h2 className="font-semibold mb-2">Organizing Your Lead View for Maximum Efficiency</h2>
               <p className="text-sm text-zinc-600 leading-relaxed">
                 The Lead View is your day-to-day working screen in FUB. How you configure it determines
-                how fast you can move through your pipeline without losing track of anyone.
+                how fast you can move through your pipeline without losing track of anyone. Watch the video
+                below for best practices.
               </p>
             </div>
 
-            <div className="space-y-4">
-              <div className="bg-white border border-zinc-200 rounded-xl p-5">
-                <p className="text-sm font-semibold mb-2">1. Pin Your Most-Used Smart Lists to the Sidebar</p>
-                <p className="text-sm text-zinc-600 leading-relaxed">
-                  Keep AI Replies, New, Hot, and Warm pinned to the top of your sidebar so you can jump between them
-                  with one click. Unpin lists you rarely use to reduce visual noise.
-                </p>
-              </div>
-              <div className="bg-white border border-zinc-200 rounded-xl p-5">
-                <p className="text-sm font-semibold mb-2">2. Set Your Default Sort to Last Activity</p>
-                <p className="text-sm text-zinc-600 leading-relaxed">
-                  Sort each list by &ldquo;Last Activity&rdquo; so the leads who engaged most recently float to the top.
-                  This ensures you always call the warmest leads first without having to think about it.
-                </p>
-              </div>
-              <div className="bg-white border border-zinc-200 rounded-xl p-5">
-                <p className="text-sm font-semibold mb-2">3. Use the Lead Detail Panel, Not a New Tab</p>
-                <p className="text-sm text-zinc-600 leading-relaxed">
-                  Click a lead to open their detail panel on the right side of your screen. Stay in list view
-                  so you can move quickly between leads. Avoid opening each lead in a new tab  -  it slows you down.
-                </p>
-              </div>
-              <div className="bg-white border border-zinc-200 rounded-xl p-5">
-                <p className="text-sm font-semibold mb-2">4. Log a Note Before Moving On</p>
-                <p className="text-sm text-zinc-600 leading-relaxed">
-                  After every call or text, type a quick note directly in the lead detail panel before you move to
-                  the next lead. Even two sentences  -  what they said, what the next step is. Future you will thank
-                  present you.
-                </p>
-              </div>
-              <div className="bg-white border border-zinc-200 rounded-xl p-5">
-                <p className="text-sm font-semibold mb-2">5. Update the Stage on Every Call</p>
-                <p className="text-sm text-zinc-600 leading-relaxed">
-                  If someone went from cold to warm on this call, change the stage right now  -  not later.
-                  Stage accuracy keeps the AI behaving correctly and your smart lists accurate.
-                </p>
-              </div>
-              <div className="bg-white border border-zinc-200 rounded-xl p-5">
-                <p className="text-sm font-semibold mb-2">6. Use the &ldquo;Next Action&rdquo; Field as Your To-Do List</p>
-                <p className="text-sm text-zinc-600 leading-relaxed">
-                  Set a Next Action date on every lead you talk to. This becomes your built-in follow-up calendar.
-                  Start your day by filtering for &ldquo;Next Action = Today&rdquo; and work through that list before
-                  moving to your smart lists.
-                </p>
+            <div className="bg-white border border-zinc-200 rounded-xl p-5">
+              <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-3">Lead Dashboard Overview</p>
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  src="https://www.loom.com/embed/fcbd234731e54d72a4ffbd1a78aa4805"
+                  className="absolute inset-0 w-full h-full rounded-lg"
+                  allowFullScreen
+                />
               </div>
             </div>
 
-            <div className="bg-zinc-900 text-white rounded-xl p-6">
-              <p className="text-sm font-semibold mb-2">Daily Workflow Order</p>
-              <ol className="space-y-1 text-sm text-zinc-300">
-                <li>1. Next Action = Today</li>
-                <li>2. AI Replies (call within 5 min of reply)</li>
-                <li>3. New Leads</li>
-                <li>4. Hot (A)  -  any you have not touched this week</li>
-                <li>5. Warm (B)  -  any you have not touched in 2 weeks</li>
-              </ol>
+            <div className="bg-white border border-zinc-200 rounded-xl p-6">
+              <p className="text-sm font-semibold mb-4">Tips For Success</p>
+              <div className="space-y-3">
+                {[
+                  { n: '1', text: 'Time Block Daily' },
+                  { n: '2', text: 'Consistently Follow Up On Your Leads' },
+                  { n: '3', text: 'Work Your Smart Lists in the Daily Workflow Collection - your goal is to zero them out' },
+                  { n: '4', text: 'The Fortune Is In The Follow Up!' },
+                ].map(item => (
+                  <div key={item.n} className="flex gap-3 items-start">
+                    <span className="flex items-center justify-center w-6 h-6 rounded-full bg-zinc-900 text-white text-xs font-semibold shrink-0 mt-0.5">{item.n}</span>
+                    <p className="text-sm text-zinc-600 leading-relaxed">{item.text}</p>
+                  </div>
+                ))}
+              </div>
             </div>
 
             <div className="flex justify-end">
