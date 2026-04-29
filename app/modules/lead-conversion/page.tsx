@@ -65,7 +65,7 @@ export default async function LeadConversionPage({ searchParams }: { searchParam
         {activeTab === 'mindset' && (
           <div className="space-y-5">
             <div className="bg-[#2A7DB5] text-white rounded-xl p-8 text-center">
-              <p className="text-xs tracking-[0.2em] uppercase text-white/70 mb-4">The Mindset Shift</p>
+              <p className="text-xs tracking-[0.2em] uppercase text-red-400 mb-4">The Mindset Shift</p>
               <p className="text-3xl font-semibold">Stop Selling.<br />Start Consulting.</p>
             </div>
 
