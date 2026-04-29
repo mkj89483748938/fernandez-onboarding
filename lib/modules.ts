@@ -37,7 +37,7 @@ export const MODULES = [
     title: 'Contract Basics',
     description: 'Step-by-step walkthroughs for RPA, Listing Agreement, AVID, and more.',
     href: '/modules/contracts',
-    totalSections: 7,
+    totalSections: 3,
   },
   {
     id: 'exp-resources',
