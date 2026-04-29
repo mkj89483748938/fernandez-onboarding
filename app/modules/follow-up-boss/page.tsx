@@ -90,19 +90,21 @@ export default async function FollowUpBossPage({ searchParams }: { searchParams:
               <p className="text-white/75 text-sm mt-3">Every call, text, email, and note must be logged.</p>
             </div>
             <div className="bg-white border border-zinc-200 rounded-xl p-6 space-y-4">
-              <h2 className="font-semibold">Why this matters</h2>
+              <h2 className="font-semibold">Why This Matters</h2>
               <p className="text-sm text-zinc-600 leading-relaxed">
-                Follow Up Boss is not just a contact list  -  it is your legal documentation, your accountability system,
-                and your business intelligence tool. If you have a conversation with a lead and do not log it,
-                that relationship is invisible to the team and invisible to you next time you call.
+                Follow Up Boss isn&apos;t just a database, it&apos;s what turns conversations into closings.
               </p>
               <p className="text-sm text-zinc-600 leading-relaxed">
-                Leads go cold because agents forget context. FUB exists so you never have to forget.
-                Every touchpoint is timestamped, every note is searchable, every deal has a paper trail.
+                If you don&apos;t log an interaction, you lose the context that helps you build trust and move the deal forward. When everything is tracked, you show up prepared, follow up smarter, and convert more leads into appointments.
               </p>
               <p className="text-sm text-zinc-600 leading-relaxed">
-                The team also reviews FUB activity to coach and support you. If nothing is logged,
-                there is nothing to coach on.
+                It also keeps your pipeline clear so you always know who to contact next and where your next deal is coming from.
+              </p>
+              <p className="text-sm text-zinc-600 leading-relaxed">
+                For the team, it&apos;s about staying aligned and supporting each other. When activity is logged, collaboration is smoother and guidance becomes more useful.
+              </p>
+              <p className="text-sm text-zinc-600 leading-relaxed font-medium">
+                Log it all, because the agents who track everything are the ones who close more.
               </p>
             </div>
             <div className="flex justify-end">
