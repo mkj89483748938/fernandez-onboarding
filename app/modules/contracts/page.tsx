@@ -171,6 +171,21 @@ export default async function ContractsPage({ searchParams }: { searchParams: Pr
         {activeTab === 'training' && (
           <div className="space-y-5">
             <div className="bg-white border border-zinc-200 rounded-xl p-6 space-y-3">
+              <h2 className="font-semibold">CAR Forms Tutor</h2>
+              <p className="text-sm text-zinc-600 leading-relaxed">
+                The California Association of REALTORS® Forms Tutor walks you through every CAR form section by section. If you are unsure how to fill something out or what a field means, this is the first place to check.
+              </p>
+              <a
+                href="https://www.car.org/transactions/ft"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-[#2A7DB5] hover:underline"
+              >
+                Open CAR Forms Tutor
+              </a>
+            </div>
+
+            <div className="bg-white border border-zinc-200 rounded-xl p-6 space-y-3">
               <h2 className="font-semibold">Glide Training</h2>
               <p className="text-sm text-zinc-600 leading-relaxed">
                 Glide offers on-demand webinar training videos covering how to use the platform from start to finish.
