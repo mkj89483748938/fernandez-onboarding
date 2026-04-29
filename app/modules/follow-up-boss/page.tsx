@@ -87,7 +87,7 @@ export default async function FollowUpBossPage({ searchParams }: { searchParams:
           <div className="space-y-6">
             <div className="bg-[#2A7DB5] text-white rounded-xl p-8 text-center">
               <p className="text-2xl font-semibold leading-tight">&ldquo;If it didn&apos;t happen in FUB,<br />it didn&apos;t happen.&rdquo;</p>
-              <p className="text-zinc-400 text-sm mt-3">Every call, text, email, and note must be logged.</p>
+              <p className="text-white/75 text-sm mt-3">Every call, text, email, and note must be logged.</p>
             </div>
             <div className="bg-white border border-zinc-200 rounded-xl p-6 space-y-4">
               <h2 className="font-semibold">Why this matters</h2>
