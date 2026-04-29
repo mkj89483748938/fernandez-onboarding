@@ -164,6 +164,18 @@ export default async function FollowUpBossPage({ searchParams }: { searchParams:
               </p>
             </div>
 
+            {/* Loom embed */}
+            <div className="bg-white border border-zinc-200 rounded-xl p-5">
+              <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-3">Smart Lists Explained</p>
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  src="https://www.loom.com/embed/9ba86a42034848f19d55dfc00027f678"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full rounded-lg"
+                />
+              </div>
+            </div>
+
             <div className="bg-amber-50 border border-amber-200 rounded-xl p-5">
               <p className="text-xs font-semibold uppercase tracking-wider text-amber-700 mb-2">Nudges - Updates Required</p>
               <p className="text-sm text-amber-900 leading-relaxed">
