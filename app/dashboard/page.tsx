@@ -53,7 +53,7 @@ export default async function DashboardPage() {
           </div>
           <Link
             href={nextModule.href}
-            className="shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-lg bg-zinc-900 text-white text-sm font-medium hover:bg-zinc-700 transition-colors mt-1"
+            className="shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#2A7DB5] text-white text-sm font-medium hover:bg-[#1E6A9E] transition-colors mt-1"
           >
             {hasStarted ? 'Continue' : 'Get Started'}
             <ArrowRight className="w-4 h-4" />

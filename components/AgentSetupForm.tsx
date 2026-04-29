@@ -101,7 +101,7 @@ export default function AgentSetupForm({ userEmail, userName }: { userEmail?: st
               </button>
               <button
                 onClick={confirmSkip}
-                className="px-4 py-2 rounded-lg bg-zinc-900 text-white text-sm font-medium hover:bg-zinc-700 transition-colors"
+                className="px-4 py-2 rounded-lg bg-[#2A7DB5] text-white text-sm font-medium hover:bg-[#1E6A9E] transition-colors"
               >
                 Yes, skip
               </button>
@@ -176,7 +176,7 @@ export default function AgentSetupForm({ userEmail, userName }: { userEmail?: st
               I already have access to FUB, Ylopo &amp; Slack - Skip This
             </button>
             <button type="submit" disabled={loading}
-              className="px-5 py-2 rounded-lg bg-zinc-900 text-white text-sm font-medium hover:bg-zinc-600 disabled:opacity-50 transition-colors shrink-0">
+              className="px-5 py-2 rounded-lg bg-[#2A7DB5] text-white text-sm font-medium hover:bg-[#1E6A9E] disabled:opacity-50 transition-colors shrink-0">
               {loading ? 'Submitting...' : 'Submit'}
             </button>
           </div>

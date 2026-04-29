@@ -49,7 +49,7 @@ export default function SectionComplete({
       className={cn(
         'flex items-center gap-2 px-4 py-2 rounded-lg border text-sm font-medium transition-all',
         done
-          ? 'bg-zinc-900 text-white border-zinc-900'
+          ? 'bg-[#2A7DB5] text-white border-[#2A7DB5]'
           : disabled
           ? 'bg-zinc-100 text-zinc-400 border-zinc-200 cursor-not-allowed'
           : 'bg-white text-zinc-700 border-zinc-300 hover:border-zinc-500'

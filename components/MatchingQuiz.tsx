@@ -113,7 +113,7 @@ export default function MatchingQuiz({ pairs, onPass }: Props) {
                       : isWrong
                       ? 'bg-red-50 border-red-300 text-red-700'
                       : isSelected
-                      ? 'bg-zinc-900 border-zinc-900 text-white'
+                      ? 'bg-[#2A7DB5] border-[#2A7DB5] text-white'
                       : 'bg-white border-zinc-200 text-zinc-700 hover:border-zinc-400'
                   }`}
                 >

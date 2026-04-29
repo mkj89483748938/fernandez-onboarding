@@ -51,7 +51,7 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
               href={`?tab=${tab.id}`}
               className={`px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
                 activeTab === tab.id
-                  ? 'bg-zinc-900 text-white'
+                  ? 'bg-[#2A7DB5] text-white'
                   : 'text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100'
               }`}
             >
@@ -136,7 +136,7 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
                   { text: 'Click Submit and Save.' },
                 ].map((step, i) => (
                   <div key={i} className="flex gap-3">
-                    <span className="flex items-center justify-center w-6 h-6 rounded-full bg-zinc-900 text-white text-xs font-semibold shrink-0 mt-0.5">{i + 1}</span>
+                    <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#2A7DB5] text-white text-xs font-semibold shrink-0 mt-0.5">{i + 1}</span>
                     <p className="text-sm text-zinc-600 leading-relaxed">{step.text}</p>
                   </div>
                 ))}
@@ -195,7 +195,7 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
                   'Click Save. The lead will now receive automated listing emails that link back to your site.',
                 ].map((step, i) => (
                   <div key={i} className="flex gap-3">
-                    <span className="flex items-center justify-center w-6 h-6 rounded-full bg-zinc-900 text-white text-xs font-semibold shrink-0 mt-0.5">{i + 1}</span>
+                    <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#2A7DB5] text-white text-xs font-semibold shrink-0 mt-0.5">{i + 1}</span>
                     <p className="text-sm text-zinc-600 leading-relaxed">{step}</p>
                   </div>
                 ))}
@@ -281,7 +281,7 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
                   'Click Save. The lead will begin receiving automated monthly reports with their home\'s estimated value.',
                 ].map((step, i) => (
                   <div key={i} className="flex gap-3">
-                    <span className="flex items-center justify-center w-6 h-6 rounded-full bg-zinc-900 text-white text-xs font-semibold shrink-0 mt-0.5">{i + 1}</span>
+                    <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#2A7DB5] text-white text-xs font-semibold shrink-0 mt-0.5">{i + 1}</span>
                     <p className="text-sm text-zinc-600 leading-relaxed">{step}</p>
                   </div>
                 ))}
@@ -374,7 +374,7 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
                   'Log your call attempt in FUB immediately.',
                 ].map((step, i) => (
                   <div key={i} className="flex gap-3">
-                    <span className="flex items-center justify-center w-6 h-6 rounded-full bg-zinc-900 text-white text-xs font-semibold shrink-0 mt-0.5">{i + 1}</span>
+                    <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#2A7DB5] text-white text-xs font-semibold shrink-0 mt-0.5">{i + 1}</span>
                     <p className="text-sm text-zinc-600 leading-relaxed">{step}</p>
                   </div>
                 ))}
@@ -408,7 +408,7 @@ export default async function YlopoPage({ searchParams }: { searchParams: Promis
             </div>
 
             <div className="grid grid-cols-1 gap-4">
-              <div className="bg-zinc-900 text-white rounded-xl p-6">
+              <div className="bg-[#2A7DB5] text-white rounded-xl p-6">
                 <p className="text-xs tracking-[0.15em] uppercase text-zinc-400 mb-2">Buyer Site</p>
                 <p className="text-xl font-semibold font-mono">[yourname].buyinginoc.com</p>
                 <p className="text-sm text-zinc-300 mt-2">

@@ -52,7 +52,7 @@ export default async function ContractsPage({ searchParams }: { searchParams: Pr
               href={`?tab=${tab.id}`}
               className={`px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
                 activeTab === tab.id
-                  ? 'bg-zinc-900 text-white'
+                  ? 'bg-[#2A7DB5] text-white'
                   : 'text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100'
               }`}
             >

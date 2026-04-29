@@ -52,7 +52,7 @@ export default async function LeadConversionPage({ searchParams }: { searchParam
               href={`?tab=${tab.id}`}
               className={`px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
                 activeTab === tab.id
-                  ? 'bg-zinc-900 text-white'
+                  ? 'bg-[#2A7DB5] text-white'
                   : 'text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100'
               }`}
             >
@@ -64,7 +64,7 @@ export default async function LeadConversionPage({ searchParams }: { searchParam
         {/* Mindset */}
         {activeTab === 'mindset' && (
           <div className="space-y-5">
-            <div className="bg-zinc-900 text-white rounded-xl p-8 text-center">
+            <div className="bg-[#2A7DB5] text-white rounded-xl p-8 text-center">
               <p className="text-xs tracking-[0.2em] uppercase text-zinc-400 mb-4">The Mindset Shift</p>
               <p className="text-3xl font-semibold">Stop Selling.<br />Start Consulting.</p>
             </div>
@@ -183,7 +183,7 @@ export default async function LeadConversionPage({ searchParams }: { searchParam
         {/* Framework */}
         {activeTab === 'framework' && (
           <div className="space-y-5">
-            <div className="bg-zinc-900 text-white rounded-xl p-6 text-center">
+            <div className="bg-[#2A7DB5] text-white rounded-xl p-6 text-center">
               <p className="text-xs tracking-[0.2em] uppercase text-zinc-400 mb-3">The Framework</p>
               <div className="flex items-center justify-center gap-4 text-lg font-semibold">
                 <span>Affirm</span>
@@ -332,7 +332,7 @@ export default async function LeadConversionPage({ searchParams }: { searchParam
               },
             ].map((obj) => (
               <div key={obj.title} className="bg-white border border-zinc-200 rounded-xl overflow-hidden">
-                <div className="bg-zinc-900 text-white px-5 py-3">
+                <div className="bg-[#2A7DB5] text-white px-5 py-3">
                   <p className="text-sm font-semibold">{obj.title}</p>
                 </div>
                 <div className="p-5 space-y-4">
@@ -485,7 +485,7 @@ export default async function LeadConversionPage({ searchParams }: { searchParam
               </div>
             </div>
 
-            <div className="bg-zinc-900 text-white rounded-xl p-5">
+            <div className="bg-[#2A7DB5] text-white rounded-xl p-5">
               <p className="text-sm font-semibold mb-2">The Two-Option Close</p>
               <p className="text-sm text-zinc-300">
                 Always offer two time options  -  never ask &ldquo;when are you free?&rdquo;<br />

@@ -69,7 +69,7 @@ export default async function FollowUpBossPage({ searchParams }: { searchParams:
               href={`?tab=${tab}`}
               className={`px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
                 activeTab === tab
-                  ? 'bg-zinc-900 text-white'
+                  ? 'bg-[#2A7DB5] text-white'
                   : 'text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100'
               }`}
             >
@@ -85,7 +85,7 @@ export default async function FollowUpBossPage({ searchParams }: { searchParams:
         {/* Philosophy */}
         {activeTab === 'philosophy' && (
           <div className="space-y-6">
-            <div className="bg-zinc-900 text-white rounded-xl p-8 text-center">
+            <div className="bg-[#2A7DB5] text-white rounded-xl p-8 text-center">
               <p className="text-2xl font-semibold leading-tight">&ldquo;If it didn&apos;t happen in FUB,<br />it didn&apos;t happen.&rdquo;</p>
               <p className="text-zinc-400 text-sm mt-3">Every call, text, email, and note must be logged.</p>
             </div>
@@ -275,7 +275,7 @@ export default async function FollowUpBossPage({ searchParams }: { searchParams:
                   { n: '4', text: 'The Fortune Is In The Follow Up!' },
                 ].map(item => (
                   <div key={item.n} className="flex gap-3 items-start">
-                    <span className="flex items-center justify-center w-6 h-6 rounded-full bg-zinc-900 text-white text-xs font-semibold shrink-0 mt-0.5">{item.n}</span>
+                    <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#2A7DB5] text-white text-xs font-semibold shrink-0 mt-0.5">{item.n}</span>
                     <p className="text-sm text-zinc-600 leading-relaxed">{item.text}</p>
                   </div>
                 ))}

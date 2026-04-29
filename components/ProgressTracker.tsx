@@ -53,7 +53,7 @@ export default function ProgressTracker({ moduleId, items, completedIds, onAllCo
             className={cn(
               'w-full flex items-start gap-3 p-4 rounded-lg border text-left transition-all',
               done
-                ? 'border-zinc-900 bg-zinc-900 text-white'
+                ? 'border-[#2A7DB5] bg-[#2A7DB5] text-white'
                 : 'border-zinc-200 bg-white hover:border-zinc-400 text-zinc-900'
             )}
           >

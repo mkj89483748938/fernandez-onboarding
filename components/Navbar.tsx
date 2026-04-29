@@ -44,7 +44,7 @@ export default function Navbar({ isAdmin = false }: { isAdmin?: boolean }) {
                 className={cn(
                   'px-3 py-1.5 text-xs font-medium rounded-md transition-colors',
                   pathname === link.href || pathname.startsWith(link.href + '/')
-                    ? 'bg-zinc-900 text-white'
+                    ? 'bg-[#2A7DB5] text-white'
                     : 'text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100'
                 )}
               >
