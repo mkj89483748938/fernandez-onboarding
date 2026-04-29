@@ -137,13 +137,13 @@
 .dark .bg-zinc-50 { background-color: #0F1A23; }
 .dark .bg-zinc-100 { background-color: #243D52; }
 .dark .bg-zinc-900 { background-color: #243D52; }
-.dark .text-zinc-900 { color: #E8EEF4; }
-.dark .text-zinc-700 { color: #E8EEF4; }
-.dark .text-zinc-600 { color: #9AAFC0; }
-.dark .text-zinc-500 { color: #9AAFC0; }
-.dark .text-zinc-400 { color: #607A8E; }
-.dark .text-white { color: #ffffff; }
-.dark .text-zinc-300 { color: #9AAFC0; }
+.dark .text-zinc-900 { color: #EBF2F8 !important; }
+.dark .text-zinc-700 { color: #EBF2F8 !important; }
+.dark .text-zinc-600 { color: #C8DCE8 !important; }
+.dark .text-zinc-500 { color: #BBCFDE !important; }
+.dark .text-zinc-400 { color: #8FAABF !important; }
+.dark .text-white { color: #ffffff !important; }
+.dark .text-zinc-300 { color: #C8DCE8 !important; }
 .dark .border-zinc-200 { border-color: rgba(255,255,255,0.1); }
 .dark .border-zinc-100 { border-color: rgba(255,255,255,0.07); }
 .dark .border-zinc-300 { border-color: rgba(255,255,255,0.15); }
