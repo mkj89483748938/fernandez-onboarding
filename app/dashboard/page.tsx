@@ -35,16 +35,29 @@ export default async function DashboardPage() {
 
   const name = profile?.preferred_name || profile?.full_name || 'Agent'
 
+  // Find the first module that isn't fully complete
+  const nextModule = MODULES.find(m => (completedByModule[m.id] ?? 0) < m.totalSections) ?? MODULES[0]
+  const hasStarted = totalCompleted > 0
+
   return (
     <div className="min-h-screen bg-zinc-50">
       <Navbar />
       <div className="max-w-4xl mx-auto px-4 py-12">
 
         {/* Header */}
-        <div className="mb-10">
-          <p className="text-xs tracking-[0.2em] uppercase text-zinc-400 mb-1">Welcome back</p>
-          <h1 className="text-3xl font-semibold tracking-tight">{name}</h1>
-          <p className="text-zinc-500 mt-1 text-sm">Complete all five modules to finish your onboarding.</p>
+        <div className="mb-10 flex items-start justify-between gap-4">
+          <div>
+            <p className="text-xs tracking-[0.2em] uppercase text-zinc-400 mb-1">Welcome back</p>
+            <h1 className="text-3xl font-semibold tracking-tight">{name}</h1>
+            <p className="text-zinc-500 mt-1 text-sm">Complete all modules to finish your onboarding.</p>
+          </div>
+          <Link
+            href={nextModule.href}
+            className="shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-lg bg-zinc-900 text-white text-sm font-medium hover:bg-zinc-700 transition-colors mt-1"
+          >
+            {hasStarted ? 'Continue' : 'Get Started'}
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
 
         {/* Overall Progress */}
