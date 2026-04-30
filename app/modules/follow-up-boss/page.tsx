@@ -3,6 +3,15 @@ import { redirect } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 import SectionComplete from '@/components/SectionComplete'
 import StagesComplete from '@/components/StagesComplete'
+import { Check } from 'lucide-react'
+
+const TAB_LABELS: Record<string, string> = {
+  philosophy: 'Philosophy',
+  stages: 'Stages',
+  'smart-lists': 'Smart Lists',
+  'lead-view': 'Lead View Dashboard',
+  'best-practices': 'Best Practices',
+}
 
 const MODULE_ID = 'follow-up-boss'
 
@@ -63,23 +72,24 @@ export default async function FollowUpBossPage({ searchParams }: { searchParams:
 
         {/* Navigation Tabs */}
         <div className="flex flex-wrap gap-2 mb-8 border-b border-zinc-200 pb-4">
-          {['philosophy', 'stages', 'smart-lists', 'lead-view', 'best-practices'].map(tab => (
-            <a
-              key={tab}
-              href={`?tab=${tab}`}
-              className={`px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
-                activeTab === tab
-                  ? 'bg-[#2A7DB5] text-white'
-                  : 'text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100'
-              }`}
-            >
-              {tab === 'philosophy' && 'Philosophy'}
-              {tab === 'stages' && 'Stages'}
-              {tab === 'smart-lists' && 'Smart Lists'}
-              {tab === 'lead-view' && 'Lead View Dashboard'}
-              {tab === 'best-practices' && 'Best Practices'}
-            </a>
-          ))}
+          {['philosophy', 'stages', 'smart-lists', 'lead-view', 'best-practices'].map(tab => {
+            const isActive = activeTab === tab
+            const isDone = completedIds.has(tab)
+            return (
+              <a
+                key={tab}
+                href={`?tab=${tab}`}
+                className={`flex items-center gap-1 px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
+                  isActive
+                    ? 'bg-[#2A7DB5] text-white'
+                    : 'text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100'
+                }`}
+              >
+                {TAB_LABELS[tab]}
+                {isDone && <Check className={`w-3 h-3 shrink-0 ${isActive ? 'text-white/80' : 'text-emerald-500'}`} />}
+              </a>
+            )
+          })}
         </div>
 
         {/* Philosophy */}

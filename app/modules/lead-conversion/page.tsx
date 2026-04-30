@@ -2,6 +2,7 @@ import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 import SectionComplete from '@/components/SectionComplete'
+import { Check } from 'lucide-react'
 
 const MODULE_ID = 'lead-conversion'
 
@@ -46,19 +47,24 @@ export default async function LeadConversionPage({ searchParams }: { searchParam
         </div>
 
         <div className="flex flex-wrap gap-2 mb-8 border-b border-zinc-200 pb-4">
-          {tabs.map(tab => (
-            <a
-              key={tab.id}
-              href={`?tab=${tab.id}`}
-              className={`px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
-                activeTab === tab.id
-                  ? 'bg-[#2A7DB5] text-white'
-                  : 'text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100'
-              }`}
-            >
-              {tab.label}
-            </a>
-          ))}
+          {tabs.map(tab => {
+            const isActive = activeTab === tab.id
+            const isDone = completedIds.has(tab.id)
+            return (
+              <a
+                key={tab.id}
+                href={`?tab=${tab.id}`}
+                className={`flex items-center gap-1 px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
+                  isActive
+                    ? 'bg-[#2A7DB5] text-white'
+                    : 'text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100'
+                }`}
+              >
+                {tab.label}
+                {isDone && <Check className={`w-3 h-3 shrink-0 ${isActive ? 'text-white/80' : 'text-emerald-500'}`} />}
+              </a>
+            )
+          })}
         </div>
 
         {/* Mindset */}
