@@ -4,6 +4,8 @@ import Navbar from '@/components/Navbar'
 import { MODULES } from '@/lib/modules'
 import { getModuleProgress } from '@/lib/utils'
 
+export const dynamic = 'force-dynamic'
+
 export default async function AdminPage() {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()

@@ -7,6 +7,8 @@ import { getModuleProgress } from '@/lib/utils'
 import { Progress } from '@/components/ui/progress'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 
+export const dynamic = 'force-dynamic'
+
 export default async function DashboardPage() {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
