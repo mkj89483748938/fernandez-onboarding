@@ -1,4 +1,5 @@
 import { createClient } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/admin'
 import { redirect } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 import { MODULES } from '@/lib/modules'
@@ -11,14 +12,17 @@ export default async function AdminPage() {
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) redirect('/login')
 
+  // Use service role client to bypass RLS and see all profiles
+  const admin = createAdminClient()
+
   // Fetch all profiles
-  const { data: profiles } = await supabase
+  const { data: profiles } = await admin
     .from('profiles')
     .select('*')
     .order('created_at', { ascending: false })
 
   // Fetch all progress records
-  const { data: allProgress } = await supabase
+  const { data: allProgress } = await admin
     .from('module_progress')
     .select('user_id, module_id, section_id, completed')
     .eq('completed', true)
